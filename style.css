@@ -1,0 +1,68 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf6f8;
+  color: #333;
+  direction: rtl;
+}
+.hero {
+  background: url('header.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2rem;
+}
+.offers, .gallery, .form {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.gallery .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+form {
+  display: grid;
+  gap: 1rem;
+}
+input, textarea, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
+
+.offer-box {
+  background-color: #fff;
+  border: 2px solid #ffc0cb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
