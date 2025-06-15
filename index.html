@@ -53,58 +53,152 @@
 </section>
 
 
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8" />
-  <title>معرض صور الدعوات المصممة</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f8f8f8;
-      padding: 20px;
-      direction: rtl;
-    }
-    h1 {
-      color: #d63447;
-      margin-bottom: 20
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25
-    }
-    .card {
-      background: white;
-      border-radius: 10
-      box-shadow: 0 2 10(0,0,0,0.15);
-      width: 260
-      padding: 15
-      box-sizing: border-box;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: (1.05);
-    }
-    .card img {
-      max-width: 100
-      border-radius: 8
-      margin-bottom: 10
-    }
-    .price {
-      font-size: 18
-      color: #d63447;
-      font-weight: bold;
-      margin-bottom: 
-    }
-    .description {
-      font-size: 14
-      color: #555;
-      font-style: italic;
-    }
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffe6f0; /* خلفية وردية ناعمة */
+  color: #333;
+  direction: rtl;
+}
+
+/* ترويسة الموقع */
+header.hero {
+  background: linear-gradient(to bottom, #ffb6c1, #ffe6f0); /* تدرج وردي */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+header.hero .overlay h1 {
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(to right, #6ec1e4, #2980b9); /* شريط سماوي */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header.hero p {
+  font-size: 20px;
+  color: #ffffffcc;
+}
+
+/* عروض البطاقات */
+.offers {
+  padding: 40px 20px;
+  background: #fff0f5;
+}
+
+.offers h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #c2185b;
+}
+
+.offer-box {
+  background: #fff;
+  border: 1px solid #f8bbd0;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+/* معرض الصور */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+  background: #fffafc;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  color: #d81b60;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* النموذج */
+.form {
+  padding: 40px 20px;
+  background: #ffe0ec;
+  text-align: center;
+}
+
+.form h2 {
+  color: #b71c1c;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form input, .form textarea {
+  padding: 12px;
+  border: 1px solid #f48fb1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form button {
+  background: linear-gradient(to right, #f06292, #ba68c8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+/* التذييل */
+footer {
+  background: #f8bbd0;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #880e4f;
+}
+
   </style>
 </head>
 <body>
