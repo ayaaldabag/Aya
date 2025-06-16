@@ -141,21 +141,172 @@
     .card:hover {
       transform: scale(1.03);
     }
-
-    #offers p, #offers li {
-  background-color: #ffffff;      /* خلفية بيضاء للنص */
-  border: 2px solid #0B3D91;     /* حواف زرقاء ملكية */
-  border-radius: 10px;            /* حواف دائرية */
-  padding: 12px 15px;             /* تباعد داخلي للنص */
-  color: #0B3D91;                 /* لون النص أزرق ملكي */
-  display: inline-block;          /* عشان الخلفية تحيط بالنص فقط */
-  margin-bottom: 10px;            /* مسافة تحت كل فقرة أو نقطة */
-  max-width: 100%;                /* لضبط عرض النص */
-  box-sizing: border-box;         /* لضبط الحشو داخل العرض */
-}
-  </style>
+    <!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>عروض Aya_disin</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff; /* لون خلفية عام فاتح */
+  }
+  /* تنسيق النص داخل العروض */
+  #offers div > h3,
+  #offers div > p,
+  #offers div > ul,
+  #offers div > ul > li {
+    background-color: #ffffff;      /* خلفية بيضاء للنص */
+    border: 2px solid #0B3D91;     /* حواف زرقاء ملكية */
+    border-radius: 10px;            /* حواف دائرية */
+    padding: 10px 15px;             /* تباعد داخلي للنص */
+    color: #0B3D91;                 /* لون النص أزرق ملكي */
+    margin-bottom: 12px;            /* مسافة تحت النص */
+    display: inline-block;          /* الخلفية تحيط بالنص فقط */
+    max-width: 100%;                /* لضبط عرض النص */
+    box-sizing: border-box;         /* لضبط الحشو داخل العرض */
+  }
+  /* تنسيق العنوان الرئيسي */
+  h2 {
+    color: #e91e63; /* وردي */
+    font-weight: bold;
+  }
+  /* تنسيق الحاوية */
+  .bg-white {
+    background-color: white;
+  }
+  /* تنسيق شبكة العروض */
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .md\\:grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* تنسيق صناديق العروض */
+  .bg-blue-50 {
+    background-color: #ebf4ff;
+  }
+  .p-6 {
+    padding: 1.5rem;
+  }
+  .rounded-2xl {
+    border-radius: 1rem;
+  }
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.3), 0 4px 6px -4px rgb(59 130 246 / 0.2);
+  }
+  .border {
+    border-width: 1px;
+  }
+  .border-blue-200 {
+    border-color: #bfdbfe;
+  }
+  .text-blue-700 {
+    color: #1d4ed8;
+  }
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .pl-5 {
+    padding-left: 1.25rem;
+  }
+  .text-gray-700 {
+    color: #374151;
+  }
+  .py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .md\\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  .md\\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+</style>
 </head>
 <body>
+
+  <section class="bg-white py-10 px-4 md:px-20" id="offers">
+    <h2 class="text-3xl text-center font-bold text-pink-500 mb-8">💖 عروض Aya_disin المميزة 💖</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- عرض 1 -->
+      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+        <h3>🎁 تصميم بطاقة مجاني</h3>
+        <p>يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!</p>
+      </div>
+
+      <!-- عرض 2 -->
+      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+        <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
+        <ul class="list-disc pl-5">
+          <li>3 تعديلات</li>
+          <li>دقة عالية بصيغة PDF قابلة للطباعة</li>
+        </ul>
+      </div>
+
+      <!-- عرض 3 -->
+      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+        <h3>🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
+        <ul class="list-disc pl-5">
+          <li>تعديلين</li>
+          <li>دقة عالية مناسبة للمشاركة والطباعة الرقمية</li>
+        </ul>
+      </div>
+
+      <!-- عرض 4 -->
+      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+        <h3>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
+        <p>واحصل على بطاقة زفاف مجانية!</p>
+        <ul class="list-disc pl-5">
+          <li>تعديلين</li>
+          <li>دقة عالية</li>
+          <li>ملف PDF قابل للطباعة</li>
+        </ul>
+      </div>
+
+      <!-- عرض 5 -->
+      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200 md:col-span-2">
+        <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
+        <ul class="list-disc pl-5">
+          <li>3 تعديلات</li>
+          <li>دقة عالية</li>
+        </ul>
+        <p>فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
 
   <section class="bg-white py-10 px-4 md:px-20">
   <h2 class="text-3xl text-center font-bold text-pink-500 mb-8">💖 عروض Aya_disin المميزة 💖</h2>
