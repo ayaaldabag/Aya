@@ -1,103 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://utteranc.es/client.js"
-          repo="ayaaldabag/Aya"
-          issue-term="title"
-          label="comment"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    ❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁
+  </title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: #fefefe;
+      background: #f8f8f8;
       margin: 0;
       padding: 0;
     }
-    .hero {
-      background-image: url('https://raw.githubusercontent.com/ayaaldabag/Aya/main/header.jpg');
-      background-size: cover;
-      background-position: center;
+    header.hero {
+      background: url('https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1341.jpeg') no-repeat center center/cover;
       height: 100vh;
-      position: relative;
-      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     .overlay {
-      background: rgba(0,0,0,0.4);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
     }
-    .overlay h1 {
-      font-size: 2.5rem;
+    h1, h2 {
+      color: #d63447;
     }
-    .offers, .gallery-section, .templates, .form {
+    .offers, .gallery, .templates, .form, footer {
       padding: 30px;
       text-align: center;
     }
     .offer-box {
-      background: #fff;
+      background: white;
       margin: 10px auto;
-      padding: 15px;
-      max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: right;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
     }
-    .gallery, .template-gallery {
+    .gallery, .templates {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
     }
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      width: 260px;
-      padding: 15px;
-      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 10px;
       text-align: center;
-      transition: transform 0.3s ease;
     }
     .card img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 6px;
     }
-    .price {
-      font-size: 18px;
-      color: #d63447;
-      font-weight: bold;
-    }
-    .description {
-      font-size: 14px;
-      color: #555;
-      font-style: italic;
-    }
+    .price { color: #d63447; font-weight: bold; margin-top: 8px; }
+    .description { font-style: italic; font-size: 14px; margin-bottom: 8px; }
     form input, form textarea, form button {
-      display: block;
       width: 100%;
-      margin-bottom: 10px;
       padding: 10px;
-      border-radius: 5px;
+      margin: 10px 0;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      border-radius: 8px;
     }
-    footer {
-      background: #f0f0f0;
-      padding: 15px;
-      text-align: center;
-    }
+    footer { background: #222; color: white; padding: 15px; margin-top: 40px; }
   </style>
 </head>
 <body>
@@ -142,57 +115,31 @@
       فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!
     </div>
   </section>
-  
-  <section class="gallery-section">
-    <h2>🌸 تصاميم دعوات راقية 🌸</h2>
-    <div class="gallery">
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1264.jpeg">
-        <div class="price">سعر التصميم: 3 دولار</div>
-        <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
-        <div class="utterances"></div>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1338.jpeg">
-        <div class="price">سعر التصميم: 3 دولار</div>
-        <div class="description">تصميم يحاكي الفخامة بحضور الزهور والألوان المتناغمة.</div>
-        <div class="utterances"></div>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1340.jpeg">
-        <div class="price">سعر التصميم: 3 دولار</div>
-        <div class="description">دعوة بتفاصيل ناعمة تليق بالمناسبات المميزة.</div>
-        <div class="utterances"></div>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1341.jpeg">
-        <div class="price">سعر التصميم: 3 دولار</div>
-        <div class="description">بطاقة فنية تنبض بالذوق الرفيع والجاذبية.</div>
-        <div class="utterances"></div>
-      </div>
+
+  <section class="gallery">
+    <h2>🎨 تصاميمنا المميزة</h2>
+    <!-- أضيفي كل صورك هنا -->
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1338.jpeg" alt="دعوة" />
+      <div class="price">3 دولار</div>
+      <div class="description">دعوة راقية وأنيقة</div>
     </div>
+    <!-- كرري الكارد مع الصور الأخرى -->
   </section>
 
-
   <section class="templates">
-    <h2>🛒 قوالب جاهزة للبيع</h2>
-    <div class="template-gallery">
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1294.jpeg">
-        <div class="price">2 دولار – مع كتابة: 4 دولار</div>
-        <div class="description">قالب جاهز بتصميم أنيق وقابل للتخصيص.</div>
-      </div>
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1285.png">
-        <div class="price">2 دولار – مع كتابة: 4 دولار</div>
-        <div class="description">نموذج فاخر لتصميم سريع وجذاب.</div>
-      </div>
+    <h2>🛍️ قوالب جاهزة للبيع</h2>
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1351.jpeg" alt="قالب 1">
+      <div class="price">2 دولار – 4 دولار مع كتابة</div>
+      <div class="description">قالب أنيق جاهز للطباعة</div>
     </div>
+    <!-- أكملي باقي الصور بنفس الشكل -->
   </section>
 
   <section class="form">
     <h2>📩 اطلب تصميمك الآن</h2>
-    <form action="https://formspree.io/f/xoqgnqgr" method="POST">
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
       <input type="text" name="name" placeholder="اسمك" required>
       <input type="text" name="couple_names" placeholder="اسم العرسان" required>
       <input type="tel" name="phone" placeholder="رقم الهاتف" required>
@@ -202,6 +149,18 @@
       <textarea name="note" placeholder="ملاحظات إضافية"></textarea>
       <button type="submit">إرسال الطلب</button>
     </form>
+  </section>
+
+  <section class="comments">
+    <h2>💬 تعليقات وآراء الزبائن</h2>
+    <script src="https://utteranc.es/client.js"
+        repo="ayaaldabag/Aya"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
   </section>
 
   <footer>
