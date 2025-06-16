@@ -2,164 +2,105 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁</title>
-
-  <!-- لو عندك ملف خارجي -->
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-
+  <link rel="stylesheet" href="style.css">
+  <script src="https://utteranc.es/client.js"
+          repo="ayaaldabag/Aya"
+          issue-term="title"
+          label="comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
   <style>
     body {
+      font-family: 'Arial', sans-serif;
+      background: #fefefe;
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #ffe6f0; /* خلفية وردية ناعمة */
-      color: #333;
-      direction: rtl;
+      padding: 0;
     }
-
-    /* ترويسة الموقع */
-    header.hero {
-      background: linear-gradient(to bottom, #ffb6c1, #ffe6f0); /* تدرج وردي */
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+    .hero {
+      background-image: url('https://raw.githubusercontent.com/ayaaldabag/Aya/main/header.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       position: relative;
+      color: white;
     }
-
-    header.hero .overlay h1 {
-      font-size: 36px;
-      font-weight: bold;
-      background: linear-gradient(to right, #6ec1e4, #2980b9); /* شريط سماوي */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .overlay {
+      background: rgba(0,0,0,0.4);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-
-    header.hero p {
-      font-size: 20px;
-      color: #ffffffcc;
+    .overlay h1 {
+      font-size: 2.5rem;
     }
-
-    /* عروض البطاقات */
-    .offers {
-      padding: 40px 20px;
-      background: #fff0f5;
-    }
-
-    .offers h2 {
+    .offers, .gallery-section, .templates, .form {
+      padding: 30px;
       text-align: center;
-      font-size: 28px;
-      color: #c2185b;
     }
-
     .offer-box {
       background: #fff;
-      border: 1px solid #f8bbd0;
-      border-radius: 16px;
-      padding: 20px;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      font-size: 16px;
+      margin: 10px auto;
+      padding: 15px;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: right;
     }
-
-    /* معرض الصور */
-    .gallery {
+    .gallery, .template-gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      padding: 40px 20px;
-      background: #fffafc;
+      gap: 20px;
     }
-
     .card {
       background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      width: 260px;
       padding: 15px;
+      box-sizing: border-box;
       text-align: center;
       transition: transform 0.3s ease;
     }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
     .card img {
-      max-width: 100%;
-      border-radius: 12px;
+      width: 100%;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
-
     .price {
       font-size: 18px;
-      color: #d81b60;
+      color: #d63447;
       font-weight: bold;
-      margin-bottom: 5px;
     }
-
     .description {
       font-size: 14px;
       color: #555;
       font-style: italic;
     }
-
-    /* النموذج */
-    .form {
-      padding: 40px 20px;
-      background: #ffe0ec;
-      text-align: center;
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
     }
-
-    .form h2 {
-      color: #b71c1c;
-    }
-
-    .form form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 400px;
-      margin: auto;
-    }
-
-    .form input, .form textarea {
-      padding: 12px;
-      border: 1px solid #f48fb1;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .form button {
-      background: linear-gradient(to right, #f06292, #ba68c8);
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .form button:hover {
-      opacity: 0.9;
-    }
-
-    /* التذييل */
     footer {
-      background: #f8bbd0;
-      padding: 20px;
+      background: #f0f0f0;
+      padding: 15px;
       text-align: center;
-      font-size: 14px;
-      color: #880e4f;
     }
   </style>
 </head>
-
 <body>
-
   <header class="hero">
     <div class="overlay">
       <h1>❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁</h1>
@@ -170,124 +111,94 @@
   <section class="offers">
     <h2>💖 عروض Aya_disin المميزة 💖</h2>
     <div class="offer-box">
-      🎁 تصميم بطاقة مجاني<br />
+      🎁 تصميم بطاقة مجاني<br>
       يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!
     </div>
     <div class="offer-box">
-      👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار<br />
-      تصميم راقٍ وفخم يشمل:<br />
-      ✓ 3 تعديلات<br />
+      👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار<br>
+      تصميم راقٍ وفخم يشمل:<br>
+      ✓ 3 تعديلات<br>
       ✓ دقة عالية بصيغة PDF قابلة للطباعة
     </div>
     <div class="offer-box">
-      🎬 بطاقة فيديو فاخرة – فقط 15 دولار<br />
-      تصميم فيديو مميز بطابع جميل يشمل:<br />
-      ✓ تعديلين<br />
+      🎬 بطاقة فيديو فاخرة – فقط 15 دولار<br>
+      تصميم فيديو مميز بطابع جميل يشمل:<br>
+      ✓ تعديلين<br>
       ✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية
     </div>
     <div class="offer-box">
-      💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار<br />
-      واحصل على بطاقة زفاف مجانية!<br />
-      تشمل كل بطاقة:<br />
-      ✓ تعديلين<br />
-      ✓ دقة عالية<br />
+      💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار<br>
+      واحصل على بطاقة زفاف مجانية!<br>
+      تشمل كل بطاقة:<br>
+      ✓ تعديلين<br>
+      ✓ دقة عالية<br>
       ✓ ملف PDF قابل للطباعة
     </div>
     <div class="offer-box">
-      🌟 فيديو مجاني مقابل دعمنا!<br />
-      احصل على فيديو فخم مجانًا يشمل:<br />
-      ✓ 3 تعديلات<br />
-      ✓ دقة عالية<br />
+      🌟 فيديو مجاني مقابل دعمنا!<br>
+      احصل على فيديو فخم مجانًا يشمل:<br>
+      ✓ 3 تعديلات<br>
+      ✓ دقة عالية<br>
       فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!
     </div>
   </section>
-
-  <h1 style="text-align:center; margin-top: 40px;">معرض صور الدعوات المصممة</h1>
-  <div class="gallery">
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1264.jpeg" alt="دعوة 1" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
+  
+  <section class="gallery-section">
+    <h2>🌸 تصاميم دعوات راقية 🌸</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1264.jpeg">
+        <div class="price">سعر التصميم: 3 دولار</div>
+        <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
+        <div class="utterances"></div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1338.jpeg">
+        <div class="price">سعر التصميم: 3 دولار</div>
+        <div class="description">تصميم يحاكي الفخامة بحضور الزهور والألوان المتناغمة.</div>
+        <div class="utterances"></div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1340.jpeg">
+        <div class="price">سعر التصميم: 3 دولار</div>
+        <div class="description">دعوة بتفاصيل ناعمة تليق بالمناسبات المميزة.</div>
+        <div class="utterances"></div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1341.jpeg">
+        <div class="price">سعر التصميم: 3 دولار</div>
+        <div class="description">بطاقة فنية تنبض بالذوق الرفيع والجاذبية.</div>
+        <div class="utterances"></div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_0181.jpeg" alt="دعوة 2" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
+
+  <section class="templates">
+    <h2>🛒 قوالب جاهزة للبيع</h2>
+    <div class="template-gallery">
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1294.jpeg">
+        <div class="price">2 دولار – مع كتابة: 4 دولار</div>
+        <div class="description">قالب جاهز بتصميم أنيق وقابل للتخصيص.</div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1285.png">
+        <div class="price">2 دولار – مع كتابة: 4 دولار</div>
+        <div class="description">نموذج فاخر لتصميم سريع وجذاب.</div>
+      </div>
     </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_0624.jpeg" alt="دعوة 3" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1277.jpeg" alt="دعوة 4" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة راقية تجمع بين الأناقة والبساطة.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1285.png" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">فخامة التفاصيل ولمسة ناعمة تُبهرك.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1294.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة أنيقة بروح كلاسيكية وعصرية.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1309.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">جمال التصميم يتحدث عن نفسه.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1310.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">تفاصيل ملكية لفرحٍ لا يُنسى.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1333.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة تعبّر عن ذوقك الراقي بكل بساطة.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1334.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">لمسة أنثوية تحكي عن الجمال.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1335.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">إبداع يلامس القلب ويبهج العين.</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/ayaaldabag/Aya/main/IMG_1336.jpeg" alt="دعوة" />
-      <div class="price">سعر التصميم: 3 دولار</div>
-      <div class="description">دعوة فريدة تحتفل بالحب والجمال.</div>
-    </div>
-
-  </div>
+  </section>
 
   <section class="form">
     <h2>📩 اطلب تصميمك الآن</h2>
     <form action="https://formspree.io/f/xoqgnqgr" method="POST">
-      <input type="text" name="name" placeholder="اسمك" required />
-      <input type="text" name="couple_names" placeholder="اسم العرسان" required />
-      <input type="tel" name="phone" placeholder="رقم الهاتف" required />
-      <input type="date" name="date" required />
-      <input type="time" name="time" required />
-      <input type="text" name="location" placeholder="المكان" required />
+      <input type="text" name="name" placeholder="اسمك" required>
+      <input type="text" name="couple_names" placeholder="اسم العرسان" required>
+      <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="text" name="location" placeholder="المكان" required>
       <textarea name="note" placeholder="ملاحظات إضافية"></textarea>
       <button type="submit">إرسال الطلب</button>
     </form>
