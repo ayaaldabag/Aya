@@ -338,24 +338,68 @@
   </div>
 </section>
 
-<section class="form" aria-label="نموذج طلب تصميم دعوة">
+  <section class="form">
   <h2>📩 اطلب تصميمك الآن</h2>
-  <form action="https://formspree.io/f/mqabqndr" method="POST">
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" name="name" placeholder="اسمك" required />
+  <form action="https://formspree.io/f/mqabqndr" method="POST" oninput="updatePrice()">
+    <input type="text" name="name" placeholder="اسمك" required>
+    <input type="text" name="couple_names" placeholder="اسم العرسان" required>
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <input type="date" name="date" required>
+    <input type="time" name="time" required>
+    <input type="text" name="location" placeholder="المكان" required>
+    
+    <textarea name="note" placeholder="ملاحظات إضافية"></textarea>
 
-    <label for="email">البريد الإلكتروني:</label>
-    <input type="email" id="email" name="_replyto" placeholder="بريدك الإلكتروني" required />
+    <label>نوع الدعوة:</label>
+    <select name="type" required>
+      <option value="بطاقة">بطاقة</option>
+      <option value="فيديو">فيديو</option>
+    </select>
 
-    <label for="phone">رقم الهاتف (اختياري):</label>
-    <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" />
+    <label>اختر العرض:</label>
+    <select name="offer" id="offerSelect" required>
+      <option value="مجاني">🎁 تصميم مجاني</option>
+      <option value="ملكي">👑 تصميم ملكي – 7$</option>
+      <option value="فيديو">🎬 بطاقة فيديو – 15$</option>
+      <option value="خطوبة">💍 خطوبة أو عقد قران – 7$</option>
+      <option value="مقابل دعم">🌟 فيديو مجاني مقابل دعمنا</option>
+    </select>
 
-    <label for="details">تفاصيل الطلب:</label>
-    <textarea id="details" name="details" rows="6" placeholder="أذكر نوع التصميم، النص المطلوب، الملاحظات الخاصة..." required></textarea>
+    <div id="priceBox" style="margin-top: 10px; font-weight: bold; color: #d63447;"></div>
 
-    <button type="submit">أرسل الطلب</button>
+    <button type="submit">إرسال الطلب</button>
   </form>
 </section>
+
+<script>
+  function updatePrice() {
+    const offer = document.getElementById("offerSelect").value;
+    const priceBox = document.getElementById("priceBox");
+
+    let priceText = "";
+
+    switch (offer) {
+      case "مجاني":
+        priceText = "💰 السعر: مجاني ✅";
+        break;
+      case "ملكي":
+      case "خطوبة":
+        priceText = "💰 السعر: 7 دولار";
+        break;
+      case "فيديو":
+        priceText = "💰 السعر: 15 دولار";
+        break;
+      case "مقابل دعم":
+        priceText = "💰 السعر: مجاني مقابل دعمنا ❤️";
+        break;
+      default:
+        priceText = "";
+    }
+
+    priceBox.textContent = priceText;
+  }
+</script>
+
 
 <footer>
   <p>© 2025 ❁࿓ Aya_Design Invitatione ࿓❁</p>
