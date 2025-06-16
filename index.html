@@ -401,7 +401,80 @@
 </script>
 
 
-<footer>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❦ Aya_Design_Invitation ❦</title>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background: #fff; margin: 0; padding: 0; direction: rtl; }
+    header { background: #800000; color: white; padding: 20px; text-align: center; font-size: 26px; }
+    section { padding: 20px; }
+    .template { border: 1px solid #ddd; border-radius: 10px; padding: 10px; margin-bottom: 20px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .template img { max-width: 100%; border-radius: 10px; }
+    .template h3 { margin: 10px 0; color: #800000; }
+    form { background: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin: 10px 0 5px; }
+    input, textarea, select { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #800000; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer; }
+    .note { background: #fffbcc; padding: 15px; border-radius: 5px; margin-top: 20px; border: 1px dashed #d4af37; color: #333; }
+  </style>
+</head>
+<body>
+  <header>
+    ✦ Aya_Design_Invitation ✦<br>
+    قوالب جاهزة للبيع - الدفع يدوي
+  </header>
+
+  <section>
+    <div class="template">
+      <img src="img/IMG_1338.jpeg" alt="قالب 1">
+      <h3>قالب ملكي - 2$</h3>
+      <button onclick="document.getElementById('orderForm').scrollIntoView()">أطلب الآن</button>
+    </div>
+    <div class="template">
+      <img src="img/IMG_1340.jpeg" alt="قالب 2">
+      <h3>قالب وردي مع كتابة - 4$</h3>
+      <button onclick="document.getElementById('orderForm').scrollIntoView()">أطلب الآن</button>
+    </div>
+  </section>
+
+  <section>
+    <form id="orderForm" action="https://formspree.io/f/mqabqndr" method="POST">
+      <h2>نموذج الطلب</h2>
+      <label>اسمك:</label>
+      <input type="text" name="name" required>
+
+      <label>البريد الإلكتروني أو وسيلة التواصل:</label>
+      <input type="email" name="email" required>
+
+      <label>اختيار القالب:</label>
+      <select name="template">
+        <option>قالب ملكي - 2$</option>
+        <option>قالب وردي مع كتابة - 4$</option>
+      </select>
+
+      <label>هل تريدين كتابة مخصصة داخل القالب؟</label>
+      <select name="customText">
+        <option>لا</option>
+        <option>نعم، أريد كتابة</option>
+      </select>
+
+      <label>ملاحظات إضافية:</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit">إرسال الطلب</button>
+
+      <div class="note">
+        <strong>ملاحظة:</strong><br>
+        بعد إرسال الطلب، سيتم التواصل معك عبر واتساب أو إنستغرام لتأكيد الطلب والدفع يدويًا عبر <strong>زين كاش</strong> أو تحويل محلي.
+      </div>
+    </form>
+  </section>
+</body>
+</html>
+
   <p>© 2025 ❁࿓ Aya_Design Invitatione ࿓❁</p>
 </footer>
 
