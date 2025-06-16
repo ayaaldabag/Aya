@@ -1,93 +1,80 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>✦ Aya_Design_Invitation ✦</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دعوات آية</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: url('img/IMG_1370.jpeg') no-repeat center center fixed;
+      font-family: 'Tajawal', sans-serif;
+      background-image: url('IMG_1370.jpeg');
       background-size: cover;
-      color: #222;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
     }
+
     header {
-      background: rgba(0,0,0,0.6);
-      padding: 30px;
-      text-align: center;
-      color: #fff;
-      font-size: 32px;
-      font-weight: bold;
-      border-bottom: 3px solid gold;
-    }
-    nav {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 10px;
+      background-image: url('header.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 20px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     }
-    nav a {
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
+
+    h1 {
+      font-size: 3rem;
+      color: white;
     }
-    section {
-      background: rgba(255, 255, 255, 0.85);
-      margin: 30px auto;
-      max-width: 900px;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+    main {
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #002366; /* أزرق ملكي */
     }
-    h2 {
-      color: #d4005c;
-      border-bottom: 2px solid #d4af37;
+
+    .section-title {
+      font-size: 2rem;
+      border-bottom: 2px solid #002366;
+      margin-bottom: 20px;
       padding-bottom: 10px;
     }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      overflow: hidden;
-      background: #fff;
-    }
-    .card img {
-      width: 100%;
-      display: block;
-    }
-    .card p {
-      padding: 15px;
-      font-size: 16px;
-    }
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #aaa;
-    }
-    button {
-      background: #d4005c;
+
+    .btn {
+      background-color: #002366;
       color: white;
-      padding: 12px 25px;
       border: none;
-      border-radius: 8px;
-      margin-top: 20px;
-      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 10px;
       cursor: pointer;
     }
-    .note {
-      background: #fff4dd;
-      border: 1px dashed #d4af37;
-      padding: 15px;
-      margin-top: 20px;
+
+    .btn:hover {
+      background-color: #001f5c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>دعوات آية الفاخرة</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="section-title">أهلاً بكِ</h2>
+      <p>نُقدم تصاميم دعوات ملكية أنيقة ومخصصة لكِ. اختاري ما يناسب مناسبتك.</p>
+      <button class="btn">اطلبي الآن</button>
+    </section>
+  </main>
+</body>
+</html>
+
     }
   </style>
 </head>
