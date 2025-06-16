@@ -64,34 +64,6 @@
   <header>
     <h1>Aya_Design</h1>
   </header>
-
-  <main>
-    <section>
-      <h2 class="section-title">أهلاً بكِ</h2>
-      <p>نُقدم تصاميم دعوات ملكية أنيقة ومخصصة لكِ. اختاري ما يناسب مناسبتك.</p>
-      <button class="btn">اطلبي الآن</button>
-    </section>
-  </main>
-</body> {
-  background: url('رابط_صورة_العروس.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-.glass-container {
-  background: rgba(255, 255, 255, 0.25); /* خلفية بيضاء شفافة */
-  backdrop-filter: blur(10px);           /* تأثير الطمس */
-  -webkit-backdrop-filter: blur(10px);   /* دعم لمتصفحات Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* حواف شفافة */
-  border-radius: 20px;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 900px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  color: #0B3D91; /* لون النص أزرق ملكي */
 }
 </html>
 
@@ -165,117 +137,149 @@
 <html lang="ar">
 <head>
 </style>
+
+</body><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عروض Aya_disin</title>
+  <style>
+    /* الخلفية الرئيسية */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: url('your-image-path.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 10px;
+      box-sizing: border-box;
+    }
+
+    /* صندوق العروض بزجاجية */
+    section {
+      background: rgba(255, 255, 255, 0.2); /* شفافية */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      max-width: 900px;
+      width: 100%;
+      padding: 40px 30px;
+      color: #003366; /* أزرق ملكي */
+    }
+
+    h2 {
+      text-align: center;
+      color: #e91e63; /* وردي */
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* صناديق العروض */
+    .offer-card {
+      background: rgba(255, 255, 255, 0.7);
+      border: 2px solid #003366;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .offer-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      color: #003366;
+      font-weight: 700;
+    }
+
+    .offer-card p,
+    .offer-card ul {
+      margin: 0;
+      color: #003366;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .offer-card ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    /* عرض يمتد على عمودين */
+    .full-span {
+      grid-column: span 2;
+    }
+
+    /* للجوال */
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 30px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <section class="bg-white py-10 px-4 md:px-20" id="offers">
-    <h2 class="text-3xl text-center font-bold text-pink-500 mb-8">💖 عروض Aya_disin المميزة 💖</h2>
+  <section>
+    <h2>💖 عروض Aya_disin المميزة 💖</h2>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid">
 
-      <!-- عرض 1 -->
-      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+      <div class="offer-card">
         <h3>🎁 تصميم بطاقة مجاني</h3>
         <p>يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!</p>
       </div>
 
-      <!-- عرض 2 -->
-      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+      <div class="offer-card">
         <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
-        <ul class="list-disc pl-5">
+        <ul>
           <li>3 تعديلات</li>
           <li>دقة عالية بصيغة PDF قابلة للطباعة</li>
         </ul>
       </div>
 
-      <!-- عرض 3 -->
-      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+      <div class="offer-card">
         <h3>🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
-        <ul class="list-disc pl-5">
+        <ul>
           <li>تعديلين</li>
           <li>دقة عالية مناسبة للمشاركة والطباعة الرقمية</li>
         </ul>
       </div>
 
-      <!-- عرض 4 -->
-      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
+      <div class="offer-card">
         <h3>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
         <p>واحصل على بطاقة زفاف مجانية!</p>
-        <ul class="list-disc pl-5">
+        <ul>
           <li>تعديلين</li>
           <li>دقة عالية</li>
           <li>ملف PDF قابل للطباعة</li>
         </ul>
       </div>
 
-      <!-- عرض 5 -->
-      <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200 md:col-span-2">
-        <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
-        <ul class="list-disc pl-5">
-          <li>3 تعديلات</li>
-          <li>دقة عالية</li>
-        </ul>
-        <p>فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!</p>
-      </div>
-
-    </div>
-  </section>
-
-</body>
-</html>
-
-  <section class="bg-white py-10 px-4 md:px-20">
-  <h2 class="text-3xl text-center font-bold text-pink-500 mb-8">💖 عروض Aya_disin المميزة 💖</h2>
-
-  <div class="grid md:grid-cols-2 gap-6">
-
-    <!-- عرض 1 -->
-    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
-      <h3 class="text-xl font-semibold text-blue-700 mb-2">🎁 تصميم بطاقة مجاني</h3>
-      <p class="text-gray-700">يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!</p>
-    </div>
-
-    <!-- عرض 2 -->
-    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
-      <h3 class="text-xl font-semibold text-blue-700 mb-2">👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
-      <ul class="list-disc pl-5 text-gray-700">
-        <li>3 تعديلات</li>
-        <li>دقة عالية بصيغة PDF قابلة للطباعة</li>
-      </ul>
-    </div>
-
-    <!-- عرض 3 -->
-    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
-      <h3 class="text-xl font-semibold text-blue-700 mb-2">🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
-      <ul class="list-disc pl-5 text-gray-700">
-        <li>تعديلين</li>
-        <li>دقة عالية مناسبة للمشاركة والطباعة الرقمية</li>
-      </ul>
-    </div>
-
-    <!-- عرض 4 -->
-    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200">
-      <h3 class="text-xl font-semibold text-blue-700 mb-2">💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
-      <p class="text-gray-700 mb-2">واحصل على بطاقة زفاف مجانية!</p>
-      <ul class="list-disc pl-5 text-gray-700">
-        <li>تعديلين</li>
-        <li>دقة عالية</li>
-        <li>ملف PDF قابل للطباعة</li>
-      </ul>
-    </div>
-
-    <!-- عرض 5 -->
-    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-200 md:col-span-2">
-      <h3 class="text-xl font-semibold text-blue-700 mb-2">🌟 فيديو مجاني مقابل دعمنا!</h3>
-      <ul class="list-disc pl-5 text-gray-700">
-        <li>3 تعديلات</li>
-        <li>دقة عالية</li>
-      </ul>
-      <p class="text-gray-700 mt-2">فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!</p>
-    </div>
-
-  </div>
-</section>
+      <div class="offer-card full-span">
+        <h3>🌟 فيدي
 
   <h1>🛍️ قوالب دعوات جاهزة للبيع</h1>
 
