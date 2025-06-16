@@ -2,107 +2,89 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aya_Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aya_Design - قوالب وعروض ونموذج طلب</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Tajawal', sans-serif;
-      background-image: url('IMG_1370.jpeg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
-      color: white;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
 
-    header {
-      background-image: url('header.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: white;
-    }
-
-    main {
-      padding: 40px;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #002366; /* أزرق ملكي */
-    }
-
-    .section-title {
-      font-size: 2rem;
-      border-bottom: 2px solid #002366;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-    }
-
-    .btn {
-      background-color: #002366;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #001f5c;
-    }
-  </style>
-</head>
-<body 
-  <header>
-    <h1>Aya_Design</h1>
-  </header>
-}
-</html>
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>قوالب للبيع Aya_Design</title>
-  <style>
+    /* إعدادات عامة */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Tajawal', sans-serif;
-      background-color: #fff;
-      color: #002366;
-    }
-
-    h1 {
-      text-align: center;
-      padding: 30px 0;
-      font-size: 2.5rem;
-      background-color: #002366;
+      background-image: url('IMG_1370.jpeg'); /* صورة العروس */
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+    /* تراكب داكن على الخلفية لجعل النص واضح */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 50, 0.5); /* أزرق داكن شفاف */
+      z-index: -1;
+    }
+
+    header {
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      color: #f8bbd0; /* وردي ناعم */
+      margin-top: 20px;
+    }
+
+    main {
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #002366; /* أزرق ملكي */
+      max-width: 1000px;
+      width: 95%;
+      border-radius: 25px;
+      padding: 30px 40px;
+      margin: 40px 0 80px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h2.section-title {
+      font-size: 2.5rem;
+      border-bottom: 3px solid #002366;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      color: #002366;
+      text-align: center;
+    }
+
+    /* تصميم الشبكة للمعرض */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 40px;
+      margin-bottom: 50px;
     }
 
     .card {
       position: relative;
-      border-radius: 12px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      color: #002366;
       transition: transform 0.3s ease;
-      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
     .card img {
@@ -113,131 +95,111 @@
 
     .price-tag {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 12px;
+      left: 12px;
       background-color: #002366;
       color: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     .caption {
       text-align: center;
-      padding: 10px;
-      font-size: 1rem;
-      font-weight: bold;
+      padding: 15px 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: #002366;
     }
 
-    .card:hover {
-      transform: scale(1.03);
+    /* نموذج الطلب */
+    #order {
+      margin-top: 30px;
     }
-    <!DOCTYPE html>
-<html lang="ar">
-<head>
-</style>
 
-</body><!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>عروض Aya_disin</title>
-  <style>
-    /* الخلفية الرئيسية */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: url('your-image-path.jpg') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
+    #order form {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 10px;
-      box-sizing: border-box;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    /* صندوق العروض بزجاجية */
-    section {
-      background: rgba(255, 255, 255, 0.2); /* شفافية */
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      max-width: 900px;
-      width: 100%;
-      padding: 40px 30px;
-      color: #003366; /* أزرق ملكي */
-    }
-
-    h2 {
-      text-align: center;
-      color: #e91e63; /* وردي */
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+    #order label {
       font-weight: bold;
+      color: #002366;
+      font-size: 1.1rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    /* صناديق العروض */
-    .offer-card {
-      background: rgba(255, 255, 255, 0.7);
-      border: 2px solid #003366;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .offer-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .offer-card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.3rem;
-      color: #003366;
-      font-weight: 700;
-    }
-
-    .offer-card p,
-    .offer-card ul {
-      margin: 0;
-      color: #003366;
+    #order input, 
+    #order select, 
+    #order textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #002366;
       font-size: 1rem;
-      line-height: 1.4;
+      font-family: 'Tajawal', sans-serif;
+      resize: vertical;
     }
 
-    .offer-card ul {
-      padding-left: 20px;
-      margin-top: 6px;
+    #order textarea {
+      min-height: 80px;
     }
 
-    /* عرض يمتد على عمودين */
-    .full-span {
-      grid-column: span 2;
+    #order button {
+      background-color: #002366;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
     }
 
-    /* للجوال */
+    #order button:hover {
+      background-color: #001f5c;
+    }
+
+    #order p strong {
+      color: #e91e63; /* وردي */
+      font-size: 1.3rem;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #444;
+      background-color: #fce4ec;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #d81b60;
+    }
+
+    /* Responsive */
     @media (max-width: 700px) {
-      .grid {
+      main {
+        padding: 20px 15px;
+        width: 95%;
+      }
+
+      .gallery {
         grid-template-columns: 1fr;
       }
-      section {
-        padding: 30px 15px;
+
+      #order button {
+        font-size: 1rem;
+        padding: 12px;
       }
     }
+
+  </style>
+</head>
+<body>
+  }
   </style>
 </head>
 <body>
@@ -279,7 +241,19 @@
       </div>
 
       <div class="offer-card full-span">
-        <h3>🌟 فيدي
+        <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
+        <ul>
+          <li>3 تعديلات</li>
+          <li>دقة عالية</li>
+        </ul>
+        <p>فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
 
   <h1>🛍️ قوالب دعوات جاهزة للبيع</h1>
 
