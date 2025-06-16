@@ -60,7 +60,28 @@
     }
   </style>
 </head>
-<body>
+<body {
+  background: url('رابط_صورة_العروس.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.25); /* خلفية بيضاء شفافة */
+  backdrop-filter: blur(10px);           /* تأثير الطمس */
+  -webkit-backdrop-filter: blur(10px);   /* دعم لمتصفحات Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* حواف شفافة */
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #0B3D91; /* لون النص أزرق ملكي */
+}
+>
   <header>
     <h1>Aya_Design</h1>
   </header>
