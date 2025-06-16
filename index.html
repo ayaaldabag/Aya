@@ -1,453 +1,178 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>❦ Aya_Design_Invitation ❦</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>✦ Aya_Design_Invitation ✦</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-      font-family: 'Cairo', sans-serif;
-    }
     body {
-      background: #fff8f5;
-      color: #4a2f27;
-      line-height: 1.6;
-      min-height: 100vh;
-      scroll-behavior: smooth;
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: url('img/IMG_1370.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px 0;
-    }
-
-    /* Header */
     header {
-      position: relative;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
       text-align: center;
       color: #fff;
-      font-weight: 700;
+      font-size: 32px;
+      font-weight: bold;
+      border-bottom: 3px solid gold;
     }
-    header img {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
-      border-radius: 0 0 30px 30px;
-      box-shadow: 0 8px 15px rgba(74,47,39,0.6);
-    }
-    header h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      background: rgba(128, 0, 0, 0.7);
-      padding: 15px 35px;
-      border-radius: 30px;
-      border: 2px solid #d4af37;
-      letter-spacing: 3px;
-      font-family: 'Cairo', sans-serif;
-      box-shadow: 0 0 12px #d4af37;
-    }
-
-    /* Sections titles */
-    h2.section-title {
-      text-align: center;
-      color: #800000;
-      font-size: 2.5rem;
-      margin-bottom: 25px;
-      text-shadow: 0 0 6px #d4af37;
-    }
-
-    /* التصاميم - gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
       gap: 20px;
-      margin-bottom: 50px;
     }
-    .gallery-item {
+    nav a {
+      color: #800000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d4005c;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 10px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
       overflow: hidden;
-      border-radius: 18px;
-      box-shadow: 0 6px 14px rgba(128,0,0,0.25);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      background: #fff;
     }
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(212,175,55,0.6);
-    }
-
-    /* القوالب الجاهزة */
-    .templates {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-    .template-card {
-      border-radius: 20px;
-      background: #fff0f0;
-      box-shadow: 0 8px 16px rgba(128,0,0,0.3);
-      padding: 15px;
-      text-align: center;
-      transition: box-shadow 0.3s ease;
-      border: 2px solid #d4af37;
-    }
-    .template-card:hover {
-      box-shadow: 0 10px 30px rgba(212,175,55,0.8);
-    }
-    .template-card img {
-      border-radius: 15px;
-      margin-bottom: 12px;
-      height: 230px;
-      object-fit: cover;
-      box-shadow: 0 0 8px #d4af37;
-    }
-    .template-card h3 {
-      color: #800000;
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-      font-weight: 700;
-      text-shadow: 0 0 6px #d4af37;
-    }
-    .price {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #4a2f27;
-      margin-bottom: 10px;
-    }
-
-    /* العروض */
-    .offers {
-      background: #fff4e6;
-      border: 2px solid #d4af37;
-      border-radius: 20px;
-      padding: 25px 30px;
-      margin-bottom: 50px;
-      box-shadow: 0 0 15px rgba(212,175,55,0.5);
-    }
-    .offers p {
-      font-size: 1.15rem;
-      margin-bottom: 12px;
-      color: #5a3b30;
-      text-align: justify;
-      line-height: 1.4;
-      font-weight: 500;
-    }
-
-    /* النموذج */
-    form {
-      max-width: 700px;
-      background: #fff0f0;
-      border-radius: 25px;
-      padding: 30px 40px;
-      margin: auto;
-      box-shadow: 0 12px 28px rgba(128,0,0,0.25);
-      border: 2px solid #d4af37;
-      font-weight: 600;
-      color: #4a2f27;
-    }
-    form h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #800000;
-      text-shadow: 0 0 7px #d4af37;
-      font-size: 2rem;
-    }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #5a3b30;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
+    .card img {
       width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 20px;
-      border: 2px solid #d4af37;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-family: 'Cairo', sans-serif;
-      box-shadow: inset 0 0 5px #d4af37;
-      transition: border-color 0.3s ease;
+      display: block;
     }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="date"]:focus,
-    input[type="time"]:focus,
-    select:focus,
-    textarea:focus {
-      border-color: #800000;
-      outline: none;
-      box-shadow: 0 0 12px #d4af37;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-      font-size: 1rem;
-    }
-    button[type="submit"] {
-      background: #800000;
-      color: #fff;
-      padding: 15px 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      box-shadow: 0 6px 15px rgba(212,175,55,0.9);
-      transition: background 0.3s ease;
-    }
-    button[type="submit"]:hover {
-      background: #b22222;
-      box-shadow: 0 8px 20px rgba(255,215,0,0.9);
-    }
-
-    /* رسالة تأكيد */
-    #successMessage {
-      display: none;
-      margin-top: 25px;
+    .card p {
       padding: 15px;
-      background: #d4af37;
-      color: #4a2f27;
-      border-radius: 15px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-align: center;
-      box-shadow: 0 0 15px #d4af37;
+      font-size: 16px;
     }
-
-    /* السعر النهائي */
-    #finalPrice {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #800000;
-      margin-bottom: 20px;
-      text-align: center;
-      text-shadow: 0 0 5px #d4af37;
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
     }
-
-    /* الدفع */
-    .payment-info {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #4a2f27;
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    button {
+      background: #d4005c;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
       margin-top: 20px;
-      letter-spacing: 3px;
-      user-select: none;
+      font-size: 16px;
+      cursor: pointer;
     }
-    .payment-info span {
-      font-size: 2rem;
-      color: #d4af37;
-      margin-left: 10px;
-    }
-
-    /* Responsive */
-    @media(max-width: 800px) {
-      header h1 {
-        font-size: 2rem;
-        padding: 10px 25px;
-      }
-      .template-card img {
-        height: 180px;
-      }
+    .note {
+      background: #fff4dd;
+      border: 1px dashed #d4af37;
+      padding: 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="img/header.jpg" alt="صورة العرسان" />
-    <h1>❦ Aya Design Invitation ❦</h1>
-  </header>
+  <header>✦ Aya_Design_Invitation ✦</header>
+  <nav>
+    <a href="#offers">العروض</a>
+    <a href="#designs">التصاميم</a>
+    <a href="#templates">القوالب الجاهزة</a>
+    <a href="#order">نموذج الطلب</a>
+  </nav>
 
-  <section class="container" id="designs">
-    <h2 class="section-title">التصاميم</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="img/IMG_1264.jpeg" alt="تصميم 1" /></div>
-      <div class="gallery-item"><img src="img/IMG_0181.jpeg" alt="تصميم 2" /></div>
-      <div class="gallery-item"><img src="img/IMG_0624.jpeg" alt="تصميم 3" /></div>
-      <div class="gallery-item"><img src="img/IMG_1277.jpeg" alt="تصميم 4" /></div>
-      <div class="gallery-item"><img src="img/IMG_1285.png" alt="تصميم 5" /></div>
-      <div class="gallery-item"><img src="img/IMG_1294.jpeg" alt="تصميم 6" /></div>
-      <div class="gallery-item"><img src="img/IMG_1309.jpeg" alt="تصميم 7" /></div>
-      <div class="gallery-item"><img src="img/IMG_1310.jpeg" alt="تصميم 8" /></div>
-      <div class="gallery-item"><img src="img/IMG_1311.jpeg" alt="تصميم 9" /></div>
-      <div class="gallery-item"><img src="img/IMG_1333.jpeg" alt="تصميم 10" /></div>
-      <div class="gallery-item"><img src="img/IMG_1334.jpeg" alt="تصميم 11" /></div>
-      <div class="gallery-item"><img src="img/IMG_1335.jpeg" alt="تصميم 12" /></div>
-      <div class="gallery-item"><img src="img/IMG_1336.jpeg" alt="تصميم 13" /></div>
-      <div class="gallery-item"><img src="img/IMG_1337.jpeg" alt="تصميم 14" /></div>
-      <div class="gallery-item"><img src="img/IMG_1338.jpeg" alt="تصميم 15" /></div>
-      <div class="gallery-item"><img src="img/IMG_1339.jpeg" alt="تصميم 16" /></div>
-      <div class="gallery-item"><img src="img/IMG_1340.jpeg" alt="تصميم 17" /></div>
-      <div class="gallery-item"><img src="img/IMG_1341.jpeg" alt="تصميم 18" /></div>
-    </div>
+  <section id="offers">
+    <h2>💖 عروض Aya_disin المميزة 💖</h2>
+    <div class="card"><p>🎁 تصميم بطاقة مجاني<br>يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!</p></div>
+    <div class="card"><p>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار<br>✓ 3 تعديلات<br>✓ دقة عالية بصيغة PDF قابلة للطباعة</p></div>
+    <div class="card"><p>🎬 بطاقة فيديو فاخرة – فقط 15 دولار<br>✓ تعديلين<br>✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية</p></div>
+    <div class="card"><p>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار<br>واحصل على بطاقة زفاف مجانية!<br>✓ تعديلين<br>✓ دقة عالية<br>✓ ملف PDF قابل للطباعة</p></div>
+    <div class="note">🌟 فيديو مجاني مقابل دعمنا!<br>شارك الموقع وادعُ أصدقائك لتحصل على فيديو فخم مجانًا يشمل 3 تعديلات وبدقة عالية.</div>
   </section>
 
-  <section class="container" id="templates">
-    <h2 class="section-title">القوالب الجاهزة</h2>
-    <div class="templates">
-      <div class="template-card">
-        <img src="img/IMG_1351.jpeg" alt="قالب 1" />
-        <h3>قالب 1</h3>
-        <p class="price">سعر القالب بدون تعديل: 2 دولار</p>
-        <p class="price">سعر القالب مع تعديل: 4 دولار</p>
-      </div>
-      <div class="template-card">
-        <img src="img/IMG_1352.jpeg" alt="قالب 2" />
-        <h3>قالب 2</h3>
-        <p class="price">سعر القالب بدون تعديل: 2 دولار</p>
-        <p class="price">سعر القالب مع تعديل: 4 دولار</p>
-      </div>
-      <div class="template-card">
-        <img src="img/IMG_1353.jpeg" alt="قالب 3" />
-        <h3>قالب 3</h3>
-        <p class="price">سعر القالب بدون تعديل: 2 دولار</p>
-        <p class="price">سعر القالب مع تعديل: 4 دولار</p>
-      </div>
-      <div class="template-card">
-        <img src="img/IMG_1354.jpeg" alt="قالب 4" />
-        <h3>قالب 4</h3>
-        <p class="price">سعر القالب بدون تعديل: 2 دولار</p>
-        <p class="price">سعر القالب مع تعديل: 4 دولار</p>
-      </div>
-      <div class="template-card">
-        <img src="img/IMG_1355.png" alt="قالب 5" />
-        <h3>قالب 5</h3>
-        <p class="price">سعر القالب بدون تعديل: 2 دولار</p>
-        <p class="price">سعر القالب مع تعديل: 4 دولار</p>
-      </div>
-    </div>
+  <section id="designs">
+    <h2>📸 التصاميم</h2>
+    <!-- استبدلي الصور أو أضيفي المزيد -->
+    <div class="card"><img src="img/IMG_1264.jpeg"></div>
+    <div class="card"><img src="img/IMG_0181.jpeg"></div>
+    <div class="card"><img src="img/IMG_1338.jpeg"></div>
+    <div class="card"><img src="img/IMG_1340.jpeg"></div>
+    <div class="card"><img src="img/IMG_1341.jpeg"></div>
+    <!-- أضيفي باقي الصور هنا بنفس الطريقة -->
   </section>
 
-  <section class="container offers" id="offers">
-    <h2 class="section-title">العروض</h2>
-    <p>العرض الأول: قوالب ملكية مع كتابة مميزة وتصاميم حصرية تناسب جميع المناسبات الرسمية.</p>
-    <p>العرض الثاني: خصومات خاصة عند شراء أكثر من قالب أو طلب تصميم مخصص مع خدمات إضافية.</p>
-    <p>العرض الثالث: سرعة في التسليم مع متابعة شخصية لكل طلب لضمان رضا العملاء الكرام.</p>
-    <p>العرض الرابع: دعم كامل بعد التسليم لتعديل أي تفاصيل تحتاجها.</p>
+  <section id="templates">
+    <h2>📂 القوالب الجاهزة</h2>
+    <div class="card"><img src="img/IMG_1351.jpeg"><p>2$ بدون كتابة - 4$ مع كتابة</p></div>
+    <div class="card"><img src="img/IMG_1352.jpeg"><p>2$ بدون كتابة - 4$ مع كتابة</p></div>
+    <div class="card"><img src="img/IMG_1353.jpeg"><p>2$ بدون كتابة - 4$ مع كتابة</p></div>
+    <div class="card"><img src="img/IMG_1354.jpeg"><p>2$ بدون كتابة - 4$ مع كتابة</p></div>
+    <div class="card"><img src="img/IMG_1355.png"><p>2$ بدون كتابة - 4$ مع كتابة</p></div>
   </section>
 
-  <section class="container" id="order">
-    <form id="orderForm" action="https://formspree.io/f/mqabqndr" method="POST" onsubmit="return handleSubmit(event)">
-      <h2>نموذج الطلب</h2>
-
-      <label for="weddingDate">تاريخ الزفاف:</label>
-      <input type="date" id="weddingDate" name="weddingDate" required />
-
-      <label for="brideName">اسم العروس:</label>
-      <input type="text" id="brideName" name="brideName" required />
-
-      <label for="groomName">اسم العريس:</label>
-      <input type="text" id="groomName" name="groomName" required />
-
-      <label for="location">المكان:</label>
-      <input type="text" id="location" name="location" required />
-
-      <label for="time">الوقت:</label>
-      <input type="time" id="time" name="time" required />
-
-      <label for="offerSelect">اختر العرض:</label>
-      <select id="offerSelect" name="offerSelect" onchange="calculatePrice()" required>
-        <option value="" disabled selected>-- اختر العرض --</option>
-        <option value="designs">التصاميم</option>
-        <option value="templates2">قالب بدون تعديل - 2 دولار</option>
-        <option value="templates4">قالب مع تعديل - 4 دولار</option>
-        <option value="custom">تصميم خاص - تواصل معنا</option>
+  <section id="order">
+    <h2>📝 نموذج الطلب</h2>
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <label>اسم الزبون</label>
+      <input type="text" name="name" required>
+      <label>التاريخ</label>
+      <input type="date" name="date" required>
+      <label>اسم العرسان</label>
+      <input type="text" name="couple_names">
+      <label>المكان</label>
+      <input type="text" name="place">
+      <label>الوقت</label>
+      <input type="text" name="time">
+      <label>اختيار العرض</label>
+      <select name="offer" id="offerSelect" onchange="calculatePrice()">
+        <option value="0">-- اختاري عرض --</option>
+        <option value="7">بطاقة ملكي 7$</option>
+        <option value="15">بطاقة فيديو 15$</option>
+        <option value="0">تصميم مجاني</option>
+        <option value="7-بونس">بطاقة عقد قران 7$ مع بطاقة زفاف</option>
       </select>
-
-      <label for="additionalNotes">ملاحظات إضافية:</label>
-      <textarea id="additionalNotes" name="additionalNotes" placeholder="أدخل أي ملاحظات تريدها"></textarea>
-
-      <div id="finalPrice">السعر النهائي: 0 دولار</div>
-
+      <label>نوع التصميم</label>
+      <select name="type">
+        <option>دعوة</option>
+        <option>فيديو</option>
+      </select>
+      <label>ملاحظة إضافية</label>
+      <textarea name="message"></textarea>
+      <p><strong>السعر النهائي: <span id="price">0</span>$</strong></p>
       <button type="submit">إرسال الطلب</button>
-
-      <div class="payment-info">
-        الدفع عن طريق زين كاش 💴
-      </div>
-
-      <div id="successMessage">تم الإرسال، رح تجيك قريبًا الرسالة.</div>
+      <div class="note">💌 تم الإرسال، رح توصلك الرسالة قريبًا عبر واتساب أو إنستغرام<br>الدفع يتم عبر <strong>زين كاش 💴</strong></div>
     </form>
   </section>
 
-<script>
-  function calculatePrice() {
-    const offerSelect = document.getElementById('offerSelect');
-    const finalPrice = document.getElementById('finalPrice');
-    let price = 0;
-    switch(offerSelect.value) {
-      case 'templates2':
-        price = 2;
-        break;
-      case 'templates4':
-        price = 4;
-        break;
-      case 'designs':
-        price = 0; // افتراضًا لا سعر محدد
-        break;
-      case 'custom':
-        price = 0; // للتواصل الخاص
-        break;
-      default:
-        price = 0;
+  <script>
+    function calculatePrice() {
+      const select = document.getElementById("offerSelect");
+      const priceDisplay = document.getElementById("price");
+      let price = select.value;
+      if (price.includes("-")) price = price.split("-")[0];
+      priceDisplay.innerText = price;
     }
-    finalPrice.textContent = `السعر النهائي: ${price} دولار`;
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'none';
-
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if(response.ok) {
-        successMessage.style.display = 'block';
-        form.reset();
-        document.getElementById('finalPrice').textContent = 'السعر النهائي: 0 دولار';
-      } else {
-        alert('حدث خطأ في الإرسال، حاول مرة أخرى.');
-      }
-    }).catch(() => {
-      alert('حدث خطأ في الإرسال، تأكد من اتصال الإنترنت.');
-    });
-
-    return false;
-  }
-</script>
+  </script>
 
 </body>
 </html>
