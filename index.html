@@ -1,36 +1,33 @@
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta name="google-site-verification" content="hbVdanLlm-gBWcrq05Pik2Q1wKR7FnQd-KCIBq10-ys" />
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="hbVdanLlm-gBWcrq05Pik2Q1wKR7FnQd-KCIBq10-ys" />
   <title>Aya_Design - قوالب وعروض ونموذج طلب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
-
-    /* إعدادات عامة */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Tajawal', sans-serif;
-      background-image: url('IMG_1370.jpeg'); /* صورة العروس */
+      background-image: url('img/IMG_1370.jpeg');
       background-size: cover;
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       color: white;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* تراكب داكن على الخلفية لجعل النص واضح */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 50, 0.5); /* أزرق داكن شفاف */
+      background-color: rgba(0, 0, 50, 0.5);
       z-index: -1;
     }
 
@@ -39,32 +36,28 @@
       text-align: center;
       font-size: 3rem;
       font-weight: bold;
+      color: #f8bbd0;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-      color: #f8bbd0; /* وردي ناعم */
-      margin-top: 20px;
     }
 
     main {
-      background-color: rgba(255, 255, 255, 0.85);
-      color: #002366; /* أزرق ملكي */
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #002366;
       max-width: 1000px;
       width: 95%;
       border-radius: 25px;
       padding: 30px 40px;
-      margin: 40px 0 80px 0;
+      margin: 40px 0;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
-    h2.section-title {
-      font-size: 2.5rem;
-      border-bottom: 3px solid #002366;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-      color: #002366;
+    h2 {
       text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #002366;
     }
 
-    /* تصميم الشبكة للمعرض */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -76,16 +69,15 @@
       position: relative;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
       background-color: #fff;
       color: #002366;
       transition: transform 0.3s ease;
       cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
     .card img {
@@ -96,368 +88,208 @@
 
     .price-tag {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 10px;
+      left: 10px;
       background-color: #002366;
       color: white;
-      padding: 6px 14px;
-      border-radius: 25px;
-      font-size: 0.95rem;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
       font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     .caption {
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 1.1rem;
+      padding: 10px;
       font-weight: 600;
-      color: #002366;
+      text-align: center;
+    }
+
+    .offer-card {
+      background-color: #fce4ec;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      color: #880e4f;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .offer-card h3 {
+      margin-top: 0;
     }
 
     /* نموذج الطلب */
-    #order {
-      margin-top: 30px;
-    }
-
     #order form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
     #order label {
       font-weight: bold;
       color: #002366;
-      font-size: 1.1rem;
     }
 
-    #order input, 
-    #order select, 
-    #order textarea {
+    #order input, #order select, #order textarea {
       padding: 10px;
-      border-radius: 10px;
-      border: 2px solid #002366;
+      border-radius: 8px;
+      border: 1px solid #002366;
       font-size: 1rem;
       font-family: 'Tajawal', sans-serif;
-      resize: vertical;
-    }
-
-    #order textarea {
-      min-height: 80px;
     }
 
     #order button {
       background-color: #002366;
       color: white;
+      padding: 12px;
       border: none;
-      padding: 15px;
-      font-size: 1.2rem;
-      border-radius: 15px;
+      border-radius: 10px;
+      font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
     }
 
     #order button:hover {
-      background-color: #001f5c;
-    }
-
-    #order p strong {
-      color: #e91e63; /* وردي */
-      font-size: 1.3rem;
+      background-color: #001940;
     }
 
     .note {
-      margin-top: 12px;
+      margin-top: 10px;
       font-size: 0.9rem;
-      color: #444;
-      background-color: #fce4ec;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      font-weight: 600;
+      background-color: #ffe3ec;
       color: #d81b60;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
     }
 
-    /* Responsive */
-    @media (max-width: 700px) {
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #444;
+      padding: 20px;
+      background-color: #f8f8f8;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
       main {
-        padding: 20px 15px;
-        width: 95%;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      #order button {
-        font-size: 1rem;
-        padding: 12px;
+        padding: 20px;
       }
     }
-
   </style>
 </head>
+
 <body>
-  }
-  </style>
-</head>
-<body>
+  <header>
+    Aya_Design 💍✨
+  </header>
 
-  <section>
-    <h2>💖 عروض Aya_disin المميزة 💖</h2>
-
-    <div class="grid">
-
+  <main>
+    <section>
+      <h2>💖 عروض Aya_Design 💖</h2>
       <div class="offer-card">
         <h3>🎁 تصميم بطاقة مجاني</h3>
-        <p>يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!</p>
+        <p>يشمل تصميم بسيط مع تعديل واحد فقط.</p>
       </div>
-
       <div class="offer-card">
-        <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
+        <h3>👑 بطاقة ملكي - 7$</h3>
         <ul>
           <li>3 تعديلات</li>
-          <li>دقة عالية بصيغة PDF قابلة للطباعة</li>
+          <li>PDF للطباعة</li>
         </ul>
       </div>
-
       <div class="offer-card">
-        <h3>🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
+        <h3>🎬 بطاقة فيديو - 15$</h3>
         <ul>
           <li>تعديلين</li>
-          <li>دقة عالية مناسبة للمشاركة والطباعة الرقمية</li>
+          <li>دقة عالية للمشاركة</li>
         </ul>
       </div>
-
       <div class="offer-card">
-        <h3>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
-        <p>واحصل على بطاقة زفاف مجانية!</p>
-        <ul>
-          <li>تعديلين</li>
-          <li>دقة عالية</li>
-          <li>ملف PDF قابل للطباعة</li>
-        </ul>
+        <h3>💍 بطاقة عقد قران - 7$ + بطاقة زفاف مجانية</h3>
       </div>
-
-      <div class="offer-card full-span">
+      <div class="offer-card">
         <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
-        <ul>
-          <li>3 تعديلات</li>
-          <li>دقة عالية</li>
-        </ul>
-        <p>فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!</p>
+        <p>شارك الموقع مع أصدقائك واحصل على بطاقة مجانية ❤️</p>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-</body>
-</html>
-
-  <h1>🛍️ قوالب دعوات جاهزة للبيع</h1>
-
-  <div class="gallery">
-    <!-- القوالب الأساسية -->
-    <div class="card">
-      <img src="IMG_1351.jpeg" alt="">
-      <div class="price-tag">2 دولار</div>
-      <div class="caption">قالب أنيق يناسب كل مناسبة</div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_1352.jpeg" alt="">
-      <div class="price-tag">2 دولار</div>
-      <div class="caption">دعوة بأسلوب بسيط وجميل</div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_1353.jpeg" alt="">
-      <div class="price-tag"> 2 دولار</div>
-      <div class="caption">نموذج قابل للتعديل بالكامل</div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_1354.jpeg" alt="">
-      <div class="price-tag">2 دولار</div>
-      <div class="caption">دعوة بتصميم ناعم ومميز</div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_1355.png" alt="">
-      <div class="price-tag">2 دولار</div>
-      <div class="caption">دعوة مميزه و جميله بكل تفاصيلها </div>
-    </div>
-
-    <!-- تصاميم آية الخاصة -->
-    <div class="card">
-      <img src="IMG_0181.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تصميم ملوكي لحفلات الزفاف</div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_1392.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تصميم دعوة برايد شور لعروستنا الحلوة ريما</div>
-    </div>
-
-     <div class="card">
-      <img src="IMG_1395.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تصميم دعوة زفاف لعروستنا الحلوة ريما</div>
-    </div>
-    
-    <div class="card">
-      <img src="IMG_1386.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة تحكي قصتك بلغة التصميم</div>
-    </div>
+    <section>
+      <h2>🛍️ قوالب دعوات جاهزة</h2>
+      <div class="gallery">
+        <!-- كرري هذا الكارت مع تغيير الصورة والوصف -->
+        <div class="card">
+          <img src="img/IMG_1351.jpeg" alt="قالب 1">
+          <div class="price-tag">2$</div>
+          <div class="caption">قالب أنيق يناسب كل مناسبة</div>
+        </div>
 
         <div class="card">
-      <img src="IMG_1374.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة تحكي قصتك بلغة التصميم</div>
-    </div>
-    
-    <div class="card">
-      <img src="IMG_1277.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة تحكي قصتك بلغة التصميم</div>
-    </div>
+          <img src="img/IMG_1392.jpeg" alt="دعوة برايد شور">
+          <div class="price-tag">Free</div>
+          <div class="caption">برايد شور لعروستنا ريما</div>
+        </div>
 
-    <div class="card">
-      <img src="IMG_1285.png" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">إبداع بصيغة حديثة</div>
-    </div>
+        <!-- أضف باقي الصور بنفس التنسيق -->
+      </div>
+    </section>
 
-    <div class="card">
-      <img src="IMG_1294.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">ألوان ناعمة ونصوص شاعرية</div>
-    </div>
+    <section id="order">
+      <h2>📝 نموذج الطلب</h2>
+      <form action="https://formspree.io/f/mqabqndr" method="POST">
+        <label>اسم الزبون</label>
+        <input type="text" name="name" required>
 
-    <div class="card">
-      <img src="IMG_1309.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة مخصصة بمظهر أنيق</div>
-    </div>
+        <label>التاريخ</label>
+        <input type="date" name="date" required>
 
-    <div class="card">
-      <img src="IMG_1310.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة عصرية ولمسة فنية</div>
-    </div>
+        <label>اسم العرسان</label>
+        <input type="text" name="couple_names">
 
-    <div class="card">
-      <img src="IMG_1311.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">بساطة وأناقة في قالب واحد</div>
-    </div>
+        <label>المكان</label>
+        <input type="text" name="place">
 
-    <div class="card">
-      <img src="IMG_1333.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">فخامة تناسب أهم لحظاتك</div>
-    </div>
+        <label>الوقت</label>
+        <input type="text" name="time">
 
-    <div class="card">
-      <img src="IMG_1334.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تفاصيل راقية بتصميم ساحر</div>
-    </div>
+        <label>اختيار العرض</label>
+        <select name="offer" id="offerSelect" onchange="calculatePrice()">
+          <option value="0">-- اختاري عرض --</option>
+          <option value="7">بطاقة ملكي 7$</option>
+          <option value="15">بطاقة فيديو 15$</option>
+          <option value="0">تصميم مجاني</option>
+          <option value="7-بونس">بطاقة عقد قران 7$ مع زفاف مجاني</option>
+        </select>
 
-    <div class="card">
-      <img src="IMG_1335.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تصميم مستوحى من الذوق الخليجي</div>
-    </div>
+        <label>نوع التصميم</label>
+        <select name="type">
+          <option>دعوة</option>
+          <option>فيديو</option>
+        </select>
 
-    <div class="card">
-      <img src="IMG_1336.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">لأجمل المناسبات الخاصة</div>
-    </div>
+        <label>ملاحظات إضافية</label>
+        <textarea name="message"></textarea>
 
-    <div class="card">
-      <img src="IMG_1337.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة بتفاصيل مخصصة لك</div>
-    </div>
+        <p><strong>السعر النهائي: <span id="price">0</span>$</strong></p>
+        <button type="submit">إرسال الطلب</button>
+        <div class="note">💌 سيتم التواصل معك عبر واتساب أو إنستغرام</div>
+      </form>
+    </section>
 
-    <div class="card">
-      <img src="IMG_1338.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">أزرق ملكي ولمسة أنثوية</div>
-    </div>
+    <section style="margin-top:20px; text-align:center;">
+      <a href="https://payhip.com/b/YU5iW" target="_blank">
+        <button style="background-color:#D4AF37; padding:10px 20px; color:#fff; border:none; border-radius:8px; font-size:1rem;">
+          اشترِ هذا التصميم الآن
+        </button>
+      </a>
+    </section>
+  </main>
 
-    <div class="card">
-      <img src="IMG_1340.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">دعوة ساحرة بمظهر كلاسيكي</div>
-    </div>
+  <footer>
+    <p>© 2025 Aya_Design. جميع الحقوق محفوظة.</p>
+    <p>يُمنع نسخ أو إعادة استخدام أي تصميم دون إذن.</p>
+    <p>Pinterest: <a href="https://pin.it/5Sb36esyv" target="_blank">https://pin.it/5Sb36esyv</a></p>
+  </footer>
 
-    <div class="card">
-      <img src="IMG_1341.jpeg" alt="">
-      <div class="price-tag">free</div>
-      <div class="caption">تصميم بسيط يعكس الذوق الرفيع</div>
-    </div>
-  </div>
-
-</body>
-</html><a href="https://payhip.com/b/YU5iW" target="_blank">
-  <button style="
-    padding: 12px 24px;
-    background-color: #D4AF37;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-  " onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
-    اشترِ هذا التصميم الآن
-  </button>
-</a>
-
-  <section id="order">
-    <h2>📝 نموذج الطلب</h2>
-    <form action="https://formspree.io/f/mqabqndr" method="POST">
-      <label>اسم الزبون</label>
-      <input type="text" name="name" required>
-      <label>التاريخ</label>
-      <input type="date" name="date" required>
-      <label>اسم العرسان</label>
-      <input type="text" name="couple_names">
-      <label>المكان</label>
-      <input type="text" name="place">
-      <label>الوقت</label>
-      <input type="text" name="time">
-      <label>اختيار العرض</label>
-      <select name="offer" id="offerSelect" onchange="calculatePrice()">
-        <option value="0">-- اختاري عرض --</option>
-        <option value="7">بطاقة ملكي 7$</option>
-        <option value="15">بطاقة فيديو 15$</option>
-        <option value="0">تصميم مجاني</option>
-        <option value="7-بونس">بطاقة عقد قران 7$ مع بطاقة زفاف</option>
-      </select>
-      <label>نوع التصميم</label>
-      <select name="type">
-        <option>دعوة</option>
-        <option>فيديو</option>
-      </select>
-      <label>ملاحظة إضافية</label>
-      <textarea name="message"></textarea>
-      <p><strong>السعر النهائي: <span id="price">0</span>$</strong></p>
-      <button type="submit">إرسال الطلب</button>
-      <div class="note">💌 تم الإرسال، رح توصلك الرسالة قريبًا عبر واتساب أو إنستغرام<br>الدفع يتم عبر <strong>زين كاش 💴</strong></div>
-    </form>
-  </section>
-
-<https://pin.it/5Sb36esyv/>رابط موقعنا في برنامج بينترست<br>https://pin.it/5Sb36esyv<br>
-  
   <script>
     function calculatePrice() {
       const select = document.getElementById("offerSelect");
@@ -467,15 +299,5 @@
       priceDisplay.innerText = price;
     }
   </script>
-
-<footer style="background-color:#fafafa; padding: 20px 0; border-top: 1px solid #eee;">
-  <div style="text-align:center; font-size: 14px; color:#444;">
-    <p>© 2025 Aya_Design. جميع الحقوق محفوظة.</p>
-    <p>يُمنع نسخ أو إعادة استخدام أي تصميم أو محتوى من هذا الموقع دون إذن كتابي مُسبق.</p>
-    <p>للاستفسار عن التراخيص التجارية أو التعاون، يرجى التواصل معنا عبر البريد: <a 
-  </div>
-</footer>
-
-
 </body>
 </html>
