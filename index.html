@@ -4,307 +4,340 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>Aya_Design - قوالب وعروض ونموذج طلب</title>
-  
-  <!-- وصف تعريفي لتحسين SEO -->
-  <meta name="description" content="Aya_Design - أفضل تصاميم دعوات الزفاف والخطوبة مع عروض مميزة وأسعار تنافسية." />
-  
-  <!-- رابط canonical -->
-  <link rel="canonical" href="https://ayainvtioner.netlify.app/" />
-  
-  <!-- خط تاجوال من جوجل -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet" />
-  
+  <title>AYA Design | خدمات التصميم</title>
+  <meta name="description" content="تصميم إعلانات، لوغوهات، ودعوات إلكترونية لجميع المناسبات باحترافية عالية." />
+  <meta name="keywords" content="تصميم, إعلانات, لوغو, دعوات, سوشيال ميديا, Aya Design" />
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Tajawal', sans-serif;
-      background-image: url('img/IMG_1370.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #002366; /* أزرق ملكي مات */
+      color: #fff;
+      line-height: 1.6;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 50, 0.5);
-      z-index: -1;
-    }
-
     header {
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 3rem;
-      font-weight: bold;
-      color: #f8bbd0;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-    }
-
-    main {
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #002366;
-      max-width: 1000px;
-      width: 95%;
-      border-radius: 25px;
-      padding: 30px 40px;
-      margin: 40px 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #002366;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
-    .card {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      background-color: #fff;
-      color: #002366;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .caption {
-      padding: 10px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .offer-card {
-      background-color: #fce4ec;
-      border-radius: 15px;
+      background-color: #001a4d;
       padding: 20px;
-      margin-bottom: 20px;
-      color: #880e4f;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .offer-card h3 {
-      margin-top: 0;
-    }
-
-    /* نموذج الطلب */
-    #order form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    #order label {
-      font-weight: bold;
-      color: #002366;
-    }
-
-    #order input, #order select, #order textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #002366;
-      font-size: 1rem;
-      font-family: 'Tajawal', sans-serif;
-    }
-
-    #order button {
-      background-color: #002366;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    #order button:hover {
-      background-color: #001940;
-    }
-
-    .note {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      background-color: #ffe3ec;
-      color: #d81b60;
-      padding: 10px;
-      border-radius: 8px;
       text-align: center;
+      border-bottom: 3px solid #ffd700; /* ذهبي */
     }
-
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #ffd700;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      color: #eee;
+    }
+    nav {
+      background-color: #001a4d;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      border-bottom: 2px solid #ffd700;
+    }
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #ffd700;
+      color: #001a4d;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 40px;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    /* ألوان الأقسام */
+    #logo-section {
+      background: #ffd700; /* ذهبي */
+      color: #001a4d;
+    }
+    #ads-section {
+      background: #40e0d0; /* تركوازي */
+      color: #001a4d;
+    }
+    #invites-section {
+      background: #6a0dad; /* بنفسجي */
+      color: #fff;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    p.offer-desc {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    ul.offers-list {
+      margin: 0 0 20px 20px;
+      list-style-type: disc;
+    }
+    ul.offers-list li {
+      margin-bottom: 8px;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      color: #001a4d;
+    }
+    form {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      font-family: inherit;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    form button {
+      background-color: #001a4d;
+      color: #ffd700;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    form button:hover {
+      background-color: #000a25;
+    }
     footer {
       text-align: center;
-      font-size: 0.8rem;
-      color: #444;
-      padding: 20px;
-      background-color: #f8f8f8;
-      margin-top: 30px;
+      padding: 15px;
+      background-color: #001a4d;
+      color: #aaa;
+      font-size: 0.9em;
+      border-top: 3px solid #ffd700;
+      margin-top: 50px;
     }
-
-    @media (max-width: 768px) {
-      main {
-        padding: 20px;
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    Aya_Design 💍✨
-  </header>
 
-  <main>
-    <section>
-      <h2>💖 عروض Aya_Design 💖</h2>
-      <div class="offer-card">
-        <h3>🎁 تصميم بطاقة مجاني</h3>
-        <p>يشمل تصميم بسيط مع تعديل واحد فقط.</p>
-      </div>
-      <div class="offer-card">
-        <h3>👑 بطاقة ملكي - 7$</h3>
-        <ul>
-          <li>3 تعديلات</li>
-          <li>PDF للطباعة</li>
-        </ul>
-      </div>
-      <div class="offer-card">
-        <h3>🎬 بطاقة فيديو - 15$</h3>
-        <ul>
-          <li>تعديلين</li>
-          <li>دقة عالية للمشاركة</li>
-        </ul>
-      </div>
-      <div class="offer-card">
-        <h3>💍 بطاقة عقد قران - 7$ + بطاقة زفاف مجانية</h3>
-      </div>
-      <div class="offer-card">
-        <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
-        <p>شارك الموقع مع أصدقائك واحصل على بطاقة مجانية ❤️</p>
-      </div>
-    </section>
+<header>
+  <h1>AYA Design</h1>
+  <p>تصميم إعلانات - لوغو - دعوات إلكترونية</p>
+</header>
 
-    <h1>تصاميم دعوات مميزة</h1>
+<nav>
+  <a href="#logo-section">تصميم اللوغو</a>
+  <a href="#ads-section">تصميم الإعلانات</a>
+  <a href="#invites-section">الدعوات الإلكترونية</a>
+</nav>
 
-    <div class="gallery">
-      <div class="card">
-        <img src="img/IMG_1277.JPG" alt="تصميم دعوة زفاف أنيقة" width="400" height="300" />
-        <div class="caption">دعوة زفاف أنيقة تجمع بين البساطة والفخامة مع لمسة ذهبية.</div>
-      </div>
+<main>
+  <!-- قسم تصميم اللوغو -->
+  <section id="logo-section" aria-label="خدمات تصميم اللوغو">
+    <h2>تصميم اللوغو</h2>
 
-      <div class="card">
-        <img src="img/IMG_1285.PNG" alt="تصميم دعوة مودرن ملونة" width="400" height="300" />
-        <div class="caption">دعوة مودرن بألوان نابضة بالحياة وتصميم معاصر جذاب.</div>
-      </div>
+    <article>
+      <p class="offer-desc">
+        <strong>عرض 1: لوغو احترافي بأقل سعر</strong>
+      </p>
+      <ul class="offers-list">
+        <li>تصميم 3 نماذج مميزة للوغو</li>
+        <li>3 تعديلات مجانية على التصميم</li>
+        <li>تسليم الملفات بجودة عالية (PNG, JPEG, AI)</li>
+        <li class="price">السعر: 40 دولار (أو ما يعادلها بالدينار العراقي)</li>
+      </ul>
+      <p>خلي علامتك التجارية تبرز مع لوغو يعكس هويتك بطريقة احترافية!</p>
+    </article>
 
-      <div class="card">
-        <img src="img/IMG_1374.JPG" alt="تصميم دعوة كلاسيكية راقية" width="400" height="300" />
-        <div class="caption">دعوة كلاسيكية راقية مستوحاة من الذوق الخليجي الأصيل.</div>
-      </div>
+    <article>
+      <p class="offer-desc">
+        <strong>عرض 2: باقة التميز للوغو والعلامة التجارية</strong>
+      </p>
+      <ul class="offers-list">
+        <li>تصميم 5 نماذج مختلفة للوغو</li>
+        <li>5 تعديلات مجانية مع استشارات شخصية</li>
+        <li>ملفات متعددة صيغ (PNG, JPEG, AI, PDF)</li>
+        <li>دليل استخدام للوغو (الألوان، الخطوط، والتنسيقات)</li>
+        <li class="price">السعر: 80 دولار</li>
+      </ul>
+      <p>العلامة التجارية القوية تبدأ بلوغو متكامل، خذ أكثر من فكرة واطمئن على اختيارك!</p>
+    </article>
 
-      <div class="card">
-        <img src="img/IMG_1386.JPG" alt="دعوة ناعمة بألوان هادئة" width="400" height="300" />
-        <div class="caption">دعوة ناعمة بألوان هادئة وتصميم مريح للعين يناسب المناسبات الخاصة.</div>
-      </div>
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <label for="name-logo">الاسم الكامل</label>
+      <input type="text" id="name-logo" name="name" required placeholder="الاسم الكامل" />
 
-      <div class="card">
-        <img src="img/IMG_1392.jpg" alt="تصميم دعوة فاخرة بلمسة فنية" width="400" height="300" />
-        <div class="caption">دعوة فاخرة بلمسة فنية رائعة تضفي سحرًا خاصًا على مناسبتك.</div>
-      </div>
-    </div>
+      <label for="email-logo">البريد الإلكتروني</label>
+      <input type="email" id="email-logo" name="email" required placeholder="البريد الإلكتروني" />
 
-    <section id="order">
-      <h2>📝 نموذج الطلب</h2>
-      <form action="https://formspree.io/f/mqabqndr" method="POST">
-        <label>اسم الزبون</label>
-        <input type="text" name="name" required />
+      <label for="package-logo">اختر العرض</label>
+      <select id="package-logo" name="package" required>
+        <option value="">-- اختر العرض --</option>
+        <option value="عرض 1: لوغو احترافي بأقل سعر - 40 دولار">عرض 1: لوغو احترافي بأقل سعر - 40 دولار</option>
+        <option value="عرض 2: باقة التميز للوغو والعلامة التجارية - 80 دولار">عرض 2: باقة التميز للوغو والعلامة التجارية - 80 دولار</option>
+      </select>
 
-        <label>التاريخ</label>
-        <input type="date" name="date" required />
+      <label for="details-logo">تفاصيل إضافية</label>
+      <textarea id="details-logo" name="details" placeholder="اكتب تفاصيل تصميم اللوغو..." required></textarea>
 
-        <label>اسم العرسان</label>
-        <input type="text" name="couple_names" />
+      <label for="payment-logo">طريقة الدفع</label>
+      <select id="payment-logo" name="payment" required>
+        <option value="">-- اختر طريقة الدفع --</option>
+        <option value="زين كاش">زين كاش</option>
+        <option value="رصيد">رصيد</option>
+        <option value="أخرى">أخرى</option>
+      </select>
 
-        <label>المكان</label>
-        <input type="text" name="place" />
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </section>
 
-        <label>الوقت</label>
-        <input type="text" name="time" />
+  <!-- قسم تصميم الإعلانات -->
+  <section id="ads-section" aria-label="خدمات تصميم الإعلانات">
+    <h2>تصميم الإعلانات</h2>
 
-        <label>اختيار العرض</label>
-        <select name="offer" id="offerSelect" onchange="calculatePrice()">
-          <option value="0">-- اختاري عرض --</option>
-          <option value="7">بطاقة ملكي 7$</option>
-          <option value="15">بطاقة فيديو 15$</option>
-          <option value="0">تصميم مجاني</option>
-          <option value="7-بونس">بطاقة عقد قران 7$ مع زفاف مجاني</option>
-        </select>
+    <article>
+      <p class="offer-desc">
+        <strong>عرض 1: إعلان صورة احترافي</strong>
+      </p>
+      <ul class="offers-list">
+        <li>تصميم إعلان صورة 1080x1080 بكسل (مناسب للسوشيال ميديا)</li>
+        <li>2 تصميم مختلف مع اختيارك الأفضل</li>
+        <li>3 تعديلات مجانية</li>
+        <li>التسليم خلال 3 أيام</li>
+        <li class="price">السعر: 30 دولار</li>
+      </ul>
+      <p>اعرض منتجك أو خدمتك بأبهى صورة تشد الانتباه في دقائق!</p>
+    </article>
 
-        <label>نوع التصميم</label>
-        <select name="type">
-          <option>دعوة</option>
-          <option>فيديو</option>
-        </select>
+    <article>
+      <p class="offer-desc">
+        <strong>عرض 2: إعلان فيديو قصير</strong>
+      </p>
+      <ul class="offers-list">
+        <li>تصميم فيديو إعلاني قصير 15 ثانية (موشن جرافيك أو فيديو متحرك)</li>
+        <li>إضافة نصوص وأصوات مناسبة (توفرها أنت أو نوفرها)</li>
+        <li>2 مراجعة مجانية</li>
+        <li>التسليم خلال 5 أيام</li>
+        <li class="price">السعر: 100 دولار</li>
+        <li><strong>خصم 50% لأول 10 طلبات</strong></li>
+      </ul>
+      <p>زيد مبيعاتك بفيديو إعلاني مميز يحكي قصة منتجك بأسلوب جذاب!</p>
+    </article>
 
-        <label>ملاحظات إضافية</label>
-        <textarea name="message"></textarea>
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <label for="name-ads">الاسم الكامل</label>
+      <input type="text" id="name-ads" name="name" required placeholder="الاسم الكامل" />
 
-        <p><strong>السعر النهائي: <span id="price">0</span>$</strong></p>
-        <button type="submit">إرسال الطلب</button>
+      <label for="email-ads">البريد الإلكتروني</label>
+      <input type="email" id="email-ads" name="email" required placeholder="البريد الإلكتروني" />
 
-        <div class="note">💌 سيتم التواصل معك عبر واتساب أو إنستغرام</div>
-      </form>
-    </section>
+      <label for="package-ads">اختر العرض</label>
+      <select id="package-ads" name="package" required>
+        <option value="">-- اختر العرض --</option>
+        <option value="عرض 1: إعلان صورة احترافي - 30 دولار">عرض 1: إعلان صورة احترافي - 30 دولار</option>
+        <option value="عرض 2: إعلان فيديو قصير - 100 دولار">عرض 2: إعلان فيديو قصير - 100 دولار</option>
+      </select>
 
-    <section style="margin-top:20px; text-align:center;">
-      <a href="https://payhip.com/b/YU5iW" target="_blank">
-        <button style="background-color:#D4AF37; padding:10px 20px; color:#fff; border:none; border-radius:8px; font-size:1rem;">
-          اشترِ هذا التصميم الآن
-        </button>
-      </a>
-    </section>
-  </main>
+      <label for="details-ads">تفاصيل إضافية</label>
+      <textarea id="details-ads" name="details" placeholder="اكتب تفاصيل الإعلان..." required></textarea>
 
-  <footer>
-    <p>© 2025 Aya_Design. جميع الحقوق محفوظة.</p>
-    <p>يُمنع نسخ أو إعادة استخدام أي تصميم دون إذن.</p>
-    <p>Pinterest: <a href="https://pin.it/5Sb36esyv" target="_blank">https://pin.it/5Sb36esyv</a></p>
-  </footer>
+      <label for="payment-ads">طريقة الدفع</label>
+      <select id="payment-ads" name="payment" required>
+        <option value="">-- اختر طريقة الدفع --</option>
+        <option value="زين كاش">زين كاش</option>
+        <option value="رصيد">رصيد</option>
+        <option value="أخرى">أخرى</option>
+      </select>
 
-  <script>
-    function calculatePrice() {
-      const select = document.getElementById("offerSelect");
-      const priceDisplay = document.getElementById("price");
-      let price = select.value;
-      if (price.includes("-")) price = price.split("-")[0];
-      priceDisplay.innerText = price;
-    }
-  </script>
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </section>
+
+  <!-- قسم الدعوات الإلكترونية -->
+  <section id="invites-section" aria-label="خدمات الدعوات الإلكترونية">
+    <h2>الدعوات الإلكترونية</h2>
+
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <label for="bride-name">اسم العرسان</label>
+      <input type="text" id="bride-name" name="bride_name" required placeholder="اسم العرسان" />
+
+      <label for="location">الموقع (مكان المناسبة)</label>
+      <input type="text" id="location" name="location" required placeholder="مكان المناسبة" />
+
+      <label for="date-time">التاريخ والوقت</label>
+      <input type="datetime-local" id="date-time" name="datetime" required />
+
+      <label for="package-invite">اختر العرض</label>
+      <select id="package-invite" name="package" required>
+        <option value="">-- اختر العرض --</option>
+        <option value="عرض الدعوات الإلكترونية - 50 دولار">عرض الدعوات الإلكترونية - 50 دولار</option>
+      </select>
+
+      <label for="price-invite">السعر</label>
+      <input type="text" id="price-invite" name="price" readonly value="50 دولار" />
+
+      <label for="notes">ملاحظات أخرى</label>
+      <textarea id="notes" name="notes" placeholder="ملاحظات أخرى"></textarea>
+
+      <label for="payment-invite">طريقة الدفع</label>
+      <select id="payment-invite" name="payment" required>
+        <option value="">-- اختر طريقة الدفع --</option>
+        <option value="زين كاش">زين كاش</option>
+        <option value="رصيد">رصيد</option>
+        <option value="أخرى">أخرى</option>
+      </select>
+
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © 2025 AYA Design. جميع الحقوق محفوظة.
+</footer>
+
 </body>
 </html>
