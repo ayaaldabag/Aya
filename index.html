@@ -300,44 +300,55 @@
   <section id="invites-section" aria-label="خدمات الدعوات الإلكترونية">
     <h2>الدعوات الإلكترونية</h2>
 
-    <form action="https://formspree.io/f/mqabqndr" method="POST">
-      <label for="bride-name">اسم العرسان</label>
-      <input type="text" id="bride-name" name="bride_name" required placeholder="اسم العرسان" />
+    <form action="https://formspree.io/f/mqabqndr" method="POST" id="invites-form">
+  <label for="bride-name">اسم العرسان</label>
+  <input type="text" id="bride-name" name="bride_name" required placeholder="اسم العرسان" />
 
-      <label for="location">الموقع (مكان المناسبة)</label>
-      <input type="text" id="location" name="location" required placeholder="مكان المناسبة" />
+  <label for="location">الموقع (مكان المناسبة)</label>
+  <input type="text" id="location" name="location" required placeholder="مكان المناسبة" />
 
-      <label for="date-time">التاريخ والوقت</label>
-      <input type="datetime-local" id="date-time" name="datetime" required />
+  <label for="date">التاريخ</label>
+  <input type="date" id="date" name="date" required />
 
-      <label for="package-invite">اختر العرض</label>
-      <select id="package-invite" name="package" required>
-        <option value="">-- اختر العرض --</option>
-        <option value="عرض الدعوات الإلكترونية - 50 دولار">عرض الدعوات الإلكترونية - 50 دولار</option>
-      </select>
+  <label for="time">الوقت</label>
+  <input type="time" id="time" name="time" required />
 
-      <label for="price-invite">السعر</label>
-      <input type="text" id="price-invite" name="price" readonly value="50 دولار" />
+  <label for="offer">اختر العرض</label>
+  <select id="offer" name="offer" required>
+    <option value="">-- اختر العرض --</option>
+    <option value="تصميم بطاقة مجاني">🎁 تصميم بطاقة مجاني</option>
+    <option value="بطاقة بطراز ملكي فاخر - 7 دولار">👑 بطاقة بطراز ملكي فاخر - 7 دولار</option>
+    <option value="بطاقة فيديو فاخرة - 15 دولار">🎬 بطاقة فيديو فاخرة - 15 دولار</option>
+    <option value="بطاقة خطوبة أو عقد قران - 7 دولار">💍 بطاقة خطوبة أو عقد قران - 7 دولار</option>
+    <option value="فيديو مجاني مقابل دعمنا">🌟 فيديو مجاني مقابل دعمنا</option>
+  </select>
 
-      <label for="notes">ملاحظات أخرى</label>
-      <textarea id="notes" name="notes" placeholder="ملاحظات أخرى"></textarea>
+  <label for="price">السعر</label>
+  <input type="text" id="price" name="price" readonly placeholder="السعر يظهر تلقائياً" />
 
-      <label for="payment-invite">طريقة الدفع</label>
-      <select id="payment-invite" name="payment" required>
-        <option value="">-- اختر طريقة الدفع --</option>
-        <option value="زين كاش">زين كاش</option>
-        <option value="رصيد">رصيد</option>
-        <option value="أخرى">أخرى</option>
-      </select>
+  <label for="notes">ملاحظة إضافية</label>
+  <textarea id="notes" name="notes" placeholder="اكتب ملاحظات إضافية هنا..."></textarea>
 
-      <button type="submit">إرسال الطلب</button>
-    </form>
-  </section>
-</main>
+  <button type="submit">إرسال الطلب</button>
+</form>
 
+<script>
+  const offerSelect = document.getElementById('offer');
+  const priceInput = document.getElementById('price');
+
+  const prices = {
+    "تصميم بطاقة مجاني": "مجاني",
+    "بطاقة بطراز ملكي فاخر - 7 دولار": "7 دولار",
+    "بطاقة فيديو فاخرة - 15 دولار": "15 دولار",
+    "بطاقة خطوبة أو عقد قران - 7 دولار": "7 دولار",
+    "فيديو مجاني مقابل دعمنا": "مجاني"
+  };
 <footer>
-  © 2025 AYA Design. جميع الحقوق محفوظة.
+  &copy;  2025 Aya Design.جميع الحقوق محفوظة.
 </footer>
 
-</body>
-</html>
+  offerSelect.addEventListener('change', () => {
+    const selected = offerSelect.value;
+    priceInput.value = prices[selected] || '';
+  });
+</script>
