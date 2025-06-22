@@ -14,7 +14,7 @@
       height: 100vh;
       flex-direction: column;
       font-family: 'Cairo', sans-serif;
-      color: #fff;
+      color: white;
       overflow: hidden;
     }
 
@@ -22,15 +22,15 @@
       width: 220px;
       height: auto;
       animation: zoomIn 2s ease-in-out;
-      border-radius: 25px;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
 
     h1 {
       margin-top: 25px;
-      font-size: 2.7em;
-      color: #fcd34d;
-      animation: fadeInUp 2s ease-in-out 1.2s forwards;
+      font-size: 2.5em;
+      color: white;
+      animation: fadeInUp 2s ease-in-out 1s forwards;
       opacity: 0;
     }
 
@@ -40,8 +40,25 @@
     }
 
     @keyframes fadeInUp {
-      0% { transform: translateY(50px); opacity: 0; }
+      0% { transform: translateY(40px); opacity: 0; }
       100% { transform: translateY(0); opacity: 1; }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background-color: #fcd34d;
+      color: #0d1b3f;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe26b;
     }
 
     audio {
@@ -49,17 +66,20 @@
     }
   </style>
 </head>
-<body onload="document.getElementById('welcome-audio').play();">
-  <!-- تشغيل نغمة فريحة -->
-  <audio id="welcome-audio" autoplay>
-    <source src="https://ayadisin.netlify.app/assets/freiha.m4a" type="audio/mp4">
-    متصفحك لا يدعم تشغيل الصوت.
-  </audio>
-
-  <!-- لوغو Aya Design -->
-  <img class="logo" src="https://ayadisin.netlify.app/assets/IMG_1581.jpeg" alt="Aya Design Logo" />
+<body>
+  <!-- اللوغو -->
+  <img class="logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAA..." alt="Aya Design Logo" />
 
   <!-- العنوان -->
   <h1>مرحبًا بكم في Aya Design</h1>
+
+  <!-- زر تشغيل النغمة -->
+  <button onclick="document.getElementById('welcome-audio').play()">تشغيل النغمة</button>
+
+  <!-- الصوت -->
+  <audio id="welcome-audio">
+    <source src="https://cdn.openai.com/chat-assets/user-uploads/4a129c608d1a04ace164ed18d2edcf284d469e19/freiha.m4a" type="audio/mp4" />
+    متصفحك لا يدعم تشغيل الصوت.
+  </audio>
 </body>
 </html>
