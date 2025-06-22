@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #0d1b3f;
+      background: linear-gradient(135deg, #0d1b3f, #1e2a5c);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,12 +16,13 @@
       font-family: 'Cairo', sans-serif;
       color: white;
       overflow: hidden;
+      text-align: center;
     }
 
     img.logo {
-      width: 220px;
+      width: 240px;
       height: auto;
-      animation: zoomIn 2s ease-in-out;
+      animation: zoomIn 2s ease-in-out, glow 3s infinite alternate;
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
@@ -34,6 +35,33 @@
       opacity: 0;
     }
 
+    p.tagline {
+      margin-top: 10px;
+      font-size: 1.3em;
+      color: #d1d5db;
+      animation: fadeInUp 2s ease-in-out 2s forwards;
+      opacity: 0;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      background-color: #fcd34d;
+      color: #0d1b3f;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #ffe26b;
+      transform: scale(1.05);
+    }
+
     @keyframes zoomIn {
       0% { transform: scale(0.3); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -44,21 +72,9 @@
       100% { transform: translateY(0); opacity: 1; }
     }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      background-color: #fcd34d;
-      color: #0d1b3f;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #ffe26b;
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 5px #fcd34d); }
+      to   { filter: drop-shadow(0 0 15px #fcd34d); }
     }
 
     audio {
@@ -68,13 +84,17 @@
 </head>
 <body>
   <!-- اللوغو -->
-  <img class="logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAA..." alt="Aya Design Logo" />
+  <img class="logo" src="logo-AyaDesign.jpeg" alt="Aya Design Logo" />
 
   <!-- العنوان -->
   <h1>مرحبًا بكم في Aya Design</h1>
+  <p class="tagline">تصاميم فاخرة لجميع مناسباتك</p>
 
   <!-- زر تشغيل النغمة -->
   <button onclick="document.getElementById('welcome-audio').play()">تشغيل النغمة</button>
+
+  <!-- زر دخول الموقع -->
+  <button onclick="window.location.href='https://ayadisin.netlify.app/gallery'">دخول الموقع</button>
 
   <!-- الصوت -->
   <audio id="welcome-audio">
