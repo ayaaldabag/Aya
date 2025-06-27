@@ -4,22 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aya Design | الصفحة الرئيسية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0d1b3f, #1e2a5c);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
       font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #0d1b3f, #1e2a5c);
       color: white;
-      overflow: hidden;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 60px 20px;
       text-align: center;
     }
 
-    img.logo {
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .logo {
       width: 240px;
       height: auto;
       animation: zoomIn 2s ease-in-out, glow 3s infinite alternate;
@@ -44,7 +53,7 @@
     }
 
     button {
-      margin-top: 30px;
+      margin: 20px 10px 0;
       padding: 12px 30px;
       font-size: 1em;
       border: none;
@@ -62,6 +71,43 @@
       transform: scale(1.05);
     }
 
+    .offer-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    form {
+      background: #fefefe;
+      color: #111;
+      padding: 20px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: right;
+    }
+
+    form input,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: #c76ba4;
+      color: white;
+      width: 100%;
+      font-size: 16px;
+    }
+
     @keyframes zoomIn {
       0% { transform: scale(0.3); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -77,121 +123,66 @@
       to   { filter: drop-shadow(0 0 15px #fcd34d); }
     }
 
-    audio {
-      display: none;
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8em; }
+      .tagline { font-size: 1em; }
+      button { width: 80%; font-size: 0.9em; }
     }
   </style>
 </head>
 <body>
-  <!-- اللوغو -->
-  <img class="logo" src="logo-AyaDesign.jpeg" alt="Aya Design Logo" />
+  <section class="intro">
+    <img class="logo" src="logo-AyaDesign.jpeg" alt="Aya Design Logo" />
+    <h1>مرحبًا بكم في Aya Design</h1>
+    <p class="tagline">تصاميم فاخرة لجميع مناسباتك</p>
+    <button onclick="document.getElementById('welcome-audio').play()">تشغيل النغمة</button>
+    <button onclick="document.getElementById('invites').scrollIntoView({behavior: 'smooth'})">دخول الموقع</button>
+    <audio id="welcome-audio">
+      <source src="https://cdn.openai.com/chat-assets/user-uploads/4a129c608d1a04ace164ed18d2edcf284d469e19/freiha.m4a" type="audio/mp4" />
+      متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+  </section>
 
-  <!-- العنوان -->
-  <h1>مرحبًا بكم في Aya Design</h1>
-  <p class="tagline">تصاميم فاخرة لجميع مناسباتك</p>
+  <section id="invites">
+    <h2 style="color: #fcd34d; font-size: 2.5em;">تصميم دعوات</h2>
+    <p style="max-width: 700px; margin: auto; font-size: 1.2em; line-height: 2;">
+      دعوات فاخرة لجميع مناسباتك — زفاف، حناء، استقبال مولود، تخرج. نجسّد ذوقك الملكي في كل تفصيلة ✨
+    </p>
+    <div class="offer-box">🎁 تصميم بطاقة مجاني<br>يشمل تصميم بسيط مع تعديل واحد فقط.</div>
+    <div class="offer-box">👑 بطاقة بطراز ملكي فاخر – 7 دولار<br>✓ 3 تعديلات ✓ دقة عالية PDF</div>
+    <div class="offer-box">🎬 بطاقة فيديو فاخرة – 15 دولار<br>✓ تعديلين ✓ فيديو بجودة عالية</div>
+    <div class="offer-box">💍 بطاقة خطوبة أو عقد – 7 دولار<br>+ بطاقة زفاف مجانية</div>
+    <div class="offer-box">🌟 فيديو مجاني مقابل دعمنا!<br>شارك موقعنا و احصل على فيديو فاخر</div>
+  </section>
 
-  <!-- زر تشغيل النغمة -->
-  <button onclick="document.getElementById('welcome-audio').play()">تشغيل النغمة</button>
-
-  <!-- زر دخول الموقع -->
-  <button onclick="window.location.href='https://ayadisin.netlify.app/gallery'">دخول الموقع</button>
-
-  <!-- الصوت -->
-  <audio id="welcome-audio">
-    <source src="https://cdn.openai.com/chat-assets/user-uploads/4a129c608d1a04ace164ed18d2edcf284d469e19/freiha.m4a" type="audio/mp4" />
-    متصفحك لا يدعم تشغيل الصوت.
-  </audio>
+  <section id="form">
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <h2 style="text-align:center; color:#c76ba4;">📝 نموذج الطلب</h2>
+      <label>الاسم الكامل:</label>
+      <input type="text" name="الاسم" required>
+      <label>اسم العريس والعروسة:</label>
+      <input type="text" name="اسماء العرسان" required>
+      <label>المكان:</label>
+      <input type="text" name="المكان" required>
+      <label>التاريخ:</label>
+      <input type="date" name="التاريخ" required>
+      <label>الوقت:</label>
+      <input type="time" name="الوقت" required>
+      <label>رقم الهاتف:</label>
+      <input type="tel" name="رقم الهاتف" pattern="[0-9+ ]+" required>
+      <label>اختيار العرض:</label>
+      <select name="العرض المختار" required>
+        <option value="">-- اختر عرضاً --</option>
+        <option value="بطاقة مجانية">🎁 بطاقة مجانية</option>
+        <option value="بطاقة ملكية - 7$">👑 بطاقة ملكية - 7 دولار</option>
+        <option value="بطاقة فيديو - 15$">🎬 فيديو فاخر - 15 دولار</option>
+        <option value="بطاقة خطوبة + زفاف مجانية - 7$">💍 خطوبة - 7 دولار</option>
+        <option value="فيديو مجاني مقابل مشاركة الموقع">🌟 فيديو مجاني</option>
+      </select>
+      <label>السعر النهائي المتوقع:</label>
+      <input type="text" name="السعر النهائي" placeholder="مثال: 7 دولار" required>
+      <button type="submit">📩 إرسال الطلب</button>
+    </form>
+  </section>
 </body>
 </html>
-<section id="invites" style="padding: 60px 20px; background: linear-gradient(to bottom, #0d1b3f, #1e2a5c); color: white; text-align: center;">
-  <h2 style="color: #fcd34d; font-size: 2.5em; margin-bottom: 20px;">تصميم دعوات</h2>
-  <p style="max-width: 700px; margin: auto; font-size: 1.2em; line-height: 2;">
-    دعوات فاخرة لجميع مناسباتك — زفاف، حناء، استقبال مولود، تخرج.  
-    نجسّد ذوقك الملكي في كل تفصيلة. ✨
-  </p>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="hero">
-  <div class="overlay">
-    <h1>❁࿓ 𝓐𝔂𝓪_𝓓𝓮𝓼𝓲𝓰𝓷 𝓲𝓷𝓿𝓲𝓽𝓪𝓽𝓲𝓸𝓷𝓮 ࿓❁</h1>
-    <p>صمم دعوتك بأناقة وفخامة ✨</p>
-  </div>
-</header>
-
-
-<section class="offers">
-  <h2>💖 عروض Aya_disin المميزة 💖</h2>
-  <div class="offer-box">
-    🎁 تصميم بطاقة مجاني<br>
-    يشمل تصميم بسيط مع تعديل واحد فقط. العرض المثالي لتجربة خدمتنا!
-  </div>
-  <div class="offer-box">
-    👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار<br>
-    تصميم راقٍ وفخم يشمل:<br>
-    ✓ 3 تعديلات<br>
-    ✓ دقة عالية بصيغة PDF قابلة للطباعة
-  </div>
-  <div class="offer-box">
-    🎬 بطاقة فيديو فاخرة – فقط 15 دولار<br>
-    تصميم فيديو مميز بطابع جميل يشمل:<br>
-    ✓ تعديلين<br>
-    ✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية
-  </div>
-  <div class="offer-box">
-    💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار<br>
-    واحصل على بطاقة زفاف مجانية!<br>
-    تشمل كل بطاقة:<br>
-    ✓ تعديلين<br>
-    ✓ دقة عالية<br>
-    ✓ ملف PDF قابل للطباعة
-  </div>
-  <div class="offer-box">
-    🌟 فيديو مجاني مقابل دعمنا!<br>
-    احصل على فيديو فخم مجانًا يشمل:<br>
-    ✓ 3 تعديلات<br>
-    ✓ دقة عالية<br>
-    فقط شارك البيج مع اصدقائك و احصل على خمس طلبات عن طريقك سوف تحصل انت على هذا العرص المجاني 
-  </div>
-<form action="https://formspree.io/f/mqabqndr" method="POST" style="max-width: 600px; margin: 0 auto; background: #fefefe; padding: 20px; border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.1);">
-  <h2 style="text-align:center; color:#c76ba4;">📝 نموذج الطلب</h2>
-
-  <label>الاسم الكامل:</label>
-  <input type="text" name="الاسم" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>اسم العريس والعروسة:</label>
-  <input type="text" name="اسماء العرسان" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>المكان:</label>
-  <input type="text" name="المكان" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>التاريخ:</label>
-  <input type="date" name="التاريخ" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>الوقت:</label>
-  <input type="time" name="الوقت" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>رقم الهاتف:</label>
-  <input type="tel" name="رقم الهاتف" required pattern="[0-9+ ]+" style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <label>اختيار العرض:</label>
-  <select name="العرض المختار" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-    <option value="">-- اختر عرضاً --</option>
-    <option value="بطاقة مجانية">🎁 بطاقة مجانية</option>
-    <option value="بطاقة ملكية - 7$">👑 بطاقة ملكية - 7 دولار</option>
-    <option value="بطاقة فيديو - 15$">🎬 فيديو فاخر - 15 دولار</option>
-    <option value="بطاقة خطوبة + زفاف مجانية - 7$">💍 خطوبة - 7 دولار</option>
-    <option value="فيديو مجاني مقابل مشاركة الموقع">🌟 فيديو مجاني</option>
-  </select>
-
-  <label>السعر النهائي المتوقع:</label>
-  <input type="text" name="السعر النهائي" placeholder="مثال: 7 دولار" required style="width:100%; padding:10px; margin-bottom:10px; border-radius: 8px; border:1px solid #ccc;">
-
-  <button type="submit" style="background-color: #c76ba4; color: white; padding: 12px 20px; border: none; border-radius: 10px; font-size: 16px; width: 100%; cursor: pointer;">📩 إرسال الطلب</button>
-</form>
