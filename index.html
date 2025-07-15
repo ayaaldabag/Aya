@@ -9,16 +9,14 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #0a0f4b; /* أزرق ملكي */
+      background-color: #0a0f4b;
       color: white;
       direction: rtl;
     }
-
     header {
       text-align: center;
       padding: 40px 20px 10px;
     }
-
     .logo-animated {
       width: 220px;
       height: auto;
@@ -27,89 +25,45 @@
       animation: fadeGlow 2s ease-out forwards;
       opacity: 0;
     }
-
     @keyframes fadeGlow {
-      0% {
-        opacity: 0;
-        transform: scale(0.9);
-        filter: brightness(0.6);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-        filter: brightness(1.1);
-      }
+      0% { opacity: 0; transform: scale(0.9); filter: brightness(0.6); }
+      100% { opacity: 1; transform: scale(1); filter: brightness(1.1); }
     }
-
-    .intro {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .intro h1 {
-      font-size: 32px;
-      color: #ffccff;
-    }
-
+    .intro { text-align: center; padding: 20px; }
+    .intro h1 { font-size: 32px; color: #ffccff; }
     .offers {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding: 30px 20px;
+      display: flex; flex-direction: column; gap: 24px; padding: 30px 20px;
     }
-
     .offer-box {
       background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 16px; padding: 20px;
       border: 1px solid #ffffff33;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
-
-    .offer-box h3 {
-      font-size: 20px;
-      color: #ff80df;
-      margin-bottom: 12px;
-    }
-
+    .offer-box h3 { font-size: 20px; color: #ff80df; margin-bottom: 12px; }
     .offer-box p {
-      font-size: 16px;
-      color: #ffffff;
-      line-height: 1.8;
-      white-space: pre-line;
+      font-size: 16px; color: #ffffff;
+      line-height: 1.8; white-space: pre-line;
     }
-
     .form-section {
       padding: 40px 20px;
       background-color: rgba(255, 255, 255, 0.05);
       text-align: center;
     }
-
-    .form-section h2 {
-      color: #ffe6ff;
-    }
-
+    .form-section h2 { color: #ffe6ff; }
     .form-section input,
-    .form-section textarea {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    .form-section textarea,
+    .form-section select {
+      width: 90%; max-width: 400px;
+      padding: 10px; margin: 10px 0;
+      border-radius: 8px; border: 1px solid #ccc;
       font-size: 16px;
     }
-
     .form-section button {
-      padding: 10px 24px;
-      background-color: #ff66b2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
+      padding: 10px 24px; background-color: #ff66b2;
+      color: white; border: none; border-radius: 8px;
+      font-size: 18px; cursor: pointer;
     }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -118,71 +72,47 @@
     }
   </style>
 </head>
-
 <body>
-
-  <!-- الشعار المتحرك -->
   <header>
     <img src="logo-AyaDesign.jpeg" alt="Aya Design Logo" class="logo-animated">
   </header>
-
-  <!-- المقدمة -->
   <section class="intro">
     <h1>💖 عروض Aya_disin المميزة 💖</h1>
   </section>
-
-  <!-- العروض -->
   <section class="offers">
     <div class="offer-box">
       <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
-      <p>
-        تصميم راقٍ وفخم يشمل:
-        ✓ 3 تعديلات
-        ✓ دقة عالية بصيغة PDF قابلة للطباعة
-      </p>
+      <p>تصميم راقٍ وفخم يشمل:
+✓ 3 تعديلات
+✓ دقة عالية بصيغة PDF قابلة للطباعة</p>
     </div>
-    
-<div class="offer-box">
-  <h3>🎁 تصميم بطاقة دعوة مجانًا</h3>
-  <p>
-    يشمل:
-    ✓ تعديل واحد
-    ✓ بصيغة PDF جاهزة للطباعة
-  </p>
-</div>
-
+    <div class="offer-box">
+      <h3>🎁 تصميم بطاقة دعوة مجانًا</h3>
+      <p>يشمل:
+✓ تعديل واحد
+✓ بصيغة PDF جاهزة للطباعة</p>
+    </div>
     <div class="offer-box">
       <h3>🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
-      <p>
-        تصميم فيديو مميز بطابع جميل يشمل:
-        ✓ تعديلين
-        ✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية
-      </p>
+      <p>تصميم فيديو مميز بطابع جميل يشمل:
+✓ تعديلين
+✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية</p>
     </div>
-
     <div class="offer-box">
       <h3>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
-      <p>
-        واحصل على بطاقة زفاف مجانية!
-        تشمل كل بطاقة:
-        ✓ تعديلين
-        ✓ دقة عالية
-        ✓ ملف PDF قابل للطباعة
-      </p>
+      <p>واحصل على بطاقة زفاف مجانية!
+✓ تعديلين
+✓ دقة عالية
+✓ ملف PDF قابل للطباعة</p>
     </div>
-
     <div class="offer-box">
       <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
-      <p>
-        احصل على فيديو فخم مجانًا يشمل:
-        ✓ 3 تعديلات
-        ✓ دقة عالية
-        فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!
-      </p>
+      <p>احصل على فيديو فخم مجانًا:
+✓ 3 تعديلات
+✓ دقة عالية
+شارك موقعنا مع أصدقائك!</p>
     </div>
   </section>
-
-  <!-- نموذج الطلب -->
   <section class="form-section">
     <h2>نموذج الطلب</h2>
     <form action="https://formspree.io/f/mqabqndr" method="POST">
@@ -194,18 +124,16 @@
       <input type="text" name="location" placeholder="المكان" required><br>
       <textarea name="note" placeholder="ملاحظات إضافية" rows="4"></textarea><br>
       <select name="offer" required>
-  <option value="" disabled selected>اختر العرض</option>
-  <option value="بطاقة ملكية فاخرة - 7 دولار">👑 بطاقة ملكية فاخرة – 7 دولار</option>
-  <option value="بطاقة فيديو فاخرة - 15 دولار">🎬 بطاقة فيديو فاخرة – 15 دولار</option>
-  <option value="بطاقة خطوبة/قران + زفاف مجاني - 7 دولار">💍 بطاقة خطوبة/قران + زفاف مجاني – 7 دولار</option>
-  <option value="فيديو مجاني مقابل مشاركة الموقع">🌟 فيديو مجاني مقابل مشاركة الموقع</option>
-  <option value="تصميم دعوه مجاني">🌟 تصميم دعوة مجاني</option>
-</select><br>
+        <option value="" disabled selected>اختر العرض</option>
+        <option value="بطاقة ملكية فاخرة - 7 دولار">👑 بطاقة ملكية فاخرة – 7 دولار</option>
+        <option value="بطاقة فيديو فاخرة - 15 دولار">🎬 بطاقة فيديو فاخرة – 15 دولار</option>
+        <option value="بطاقة خطوبة/قران + زفاف مجاني - 7 دولار">💍 بطاقة خطوبة/قران + زفاف مجاني – 7 دولار</option>
+        <option value="فيديو مجاني مقابل مشاركة الموقع">🌟 فيديو مجاني مقابل مشاركة الموقع</option>
+        <option value="تصميم دعوه مجاني">🌟 تصميم دعوة مجاني</option>
+      </select><br>
       <button type="submit">إرسال الطلب</button>
     </form>
   </section>
-
-  <!-- الفوتر -->
   <footer>
     جميع الحقوق محفوظة © Aya Design 2025
   </footer>
