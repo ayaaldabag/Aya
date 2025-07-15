@@ -1,90 +1,97 @@
 <!DOCTYPE html>
-<html lang="ar">
-
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aya Design - دعوات فاخرة</title>
-  <link rel="icon" href="logo-AyaDesign.jpeg" type="image/jpeg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya Design | دعوات فاخرة</title>
+  <link rel="icon" href="IMG_1579.jpeg" type="image/jpeg" />
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('aya-bride-bg.jpeg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: #333;
+      background-color: #0a0f4b; /* أزرق ملكي */
+      color: white;
       direction: rtl;
     }
 
     header {
-      text-align: right;
-      padding: 20px;
+      text-align: center;
+      padding: 40px 20px 10px;
     }
 
-    header img {
-      width: 180px;
+    .logo-animated {
+      width: 220px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+      animation: fadeGlow 2s ease-out forwards;
+      opacity: 0;
     }
 
-    .language-btn {
-      float: left;
-      padding: 8px 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
+    @keyframes fadeGlow {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+        filter: brightness(0.6);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1.1);
+      }
     }
 
     .intro {
-      padding: 40px;
-      background-color: rgba(255, 255, 255, 0.8);
       text-align: center;
+      padding: 20px;
     }
 
     .intro h1 {
-      font-size: 36px;
-      color: #e91e63;
-    }
-
-    .intro p {
-      font-size: 18px;
-      color: #333;
+      font-size: 32px;
+      color: #ffccff;
     }
 
     .offers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 30px 20px;
     }
 
     .offer-box {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       padding: 20px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      text-align: center;
+      border: 1px solid #ffffff33;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
 
     .offer-box h3 {
-      color: #3f51b5;
+      font-size: 20px;
+      color: #ff80df;
+      margin-bottom: 12px;
+    }
+
+    .offer-box p {
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 1.8;
+      white-space: pre-line;
     }
 
     .form-section {
-      padding: 40px;
-      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.05);
       text-align: center;
+    }
+
+    .form-section h2 {
+      color: #ffe6ff;
     }
 
     .form-section input,
     .form-section textarea {
-      width: 80%;
+      width: 90%;
       max-width: 400px;
       padding: 10px;
       margin: 10px 0;
@@ -95,7 +102,7 @@
 
     .form-section button {
       padding: 10px 24px;
-      background-color: #4caf50;
+      background-color: #ff66b2;
       color: white;
       border: none;
       border-radius: 8px;
@@ -103,93 +110,72 @@
       cursor: pointer;
     }
 
-    .catalog {
-      padding: 40px;
-      background-color: rgba(255, 255, 255, 0.9);
-    }
-
-    .catalog h2 {
-      text-align: center;
-      color: #2196f3;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      padding-top: 20px;
-    }
-
-    .grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.05);
       font-size: 14px;
     }
   </style>
 </head>
 
 <body>
-  body {
-  background-color: #0a0f4b; /* أزرق ملكي غامق */
-  color: white; /* يخلي كل الكتابة بالأبيض */
-}
 
-/* لو عندك أقسام أخرى تحتاج تعديل لونها أيضاً */
-header, footer, section, nav {
-  background-color: #0a0f4b !important;
-  color: white !important;
-}
-
-/* لو عندك روابط */
-a {
-  color: #ffffff;
-}
-a:hover {
-  color: #cccccc; /* عند المرور يتغير شوي */
-}
-
+  <!-- الشعار المتحرك -->
   <header>
-    <button class="language-btn" onclick="toggleLanguage()">English</button>
-    <img src="logo-AyaDesign.jpeg" alt="Aya Design Logo">
+    <img src="IMG_1579.jpeg" alt="Aya Design Logo" class="logo-animated">
   </header>
 
+  <!-- المقدمة -->
   <section class="intro">
-    <h1 id="main-title">مرحبًا بكم في Aya Design</h1>
-    <p id="tagline">تصاميم فاخرة لجميع مناسباتك</p>
+    <h1>💖 عروض Aya_disin المميزة 💖</h1>
   </section>
 
+  <!-- العروض -->
   <section class="offers">
-    <div class="offer-box"><h3 id="offer1">تصميم دعوة فيديو فخم - 10 دولار</h3></div>
-    <div class="offer-box"><h3 id="offer2">تصميم بطاقة دعوة ثابتة - 15 ريال</h3></div>
-    <div class="offer-box"><h3 id="offer3">تصميم مخصص مع تعديل غير محدود - 40 ريال</h3></div>
-    <div class="offer-box"><h3 id="offer4">باقة شاملة (بطاقة + فيديو + تهنئة) - 60 ريال</h3></div>
-    <div class="offer-box"><h3 id="offer5">خصم 10% عند طلب أكثر من دعوة</h3></div>
-    <div class="offer-box"><h3 id="offer6">دعوة عيد ميلاد باسم الطفل - 20 ريال</h3></div>
-    <div class="offer-box"><h3 id="offer7">دعوة رمضان/عيد - 10 ريال فقط</h3></div>
-  </section>
+    <div class="offer-box">
+      <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
+      <p>
+        تصميم راقٍ وفخم يشمل:
+        ✓ 3 تعديلات
+        ✓ دقة عالية بصيغة PDF قابلة للطباعة
+      </p>
+    </div>
 
-  <section class="catalog">
-    <h2 id="catalog-title">القوالب الجاهزة</h2>
-    <div class="grid">
-      <img src="IMG_1351.jpeg" alt="قالب 1">
-      <img src="IMG_1352.jpeg" alt="قالب 2">
-      <img src="IMG_1353.jpeg" alt="قالب 3">
-      <img src="IMG_1354.jpeg" alt="قالب 4">
-      <img src="IMG_1355.jpeg" alt="قالب 5">
-      <img src="IMG_0181.jpeg" alt="تصميم خاص Aya">
-      <img src="IMG_1341.jpeg" alt="تصميم خاص Aya 2">
+    <div class="offer-box">
+      <h3>🎬 بطاقة فيديو فاخرة – فقط 15 دولار</h3>
+      <p>
+        تصميم فيديو مميز بطابع جميل يشمل:
+        ✓ تعديلين
+        ✓ دقة عالية مناسبة للمشاركة والطباعة الرقمية
+      </p>
+    </div>
+
+    <div class="offer-box">
+      <h3>💍 بطاقة خطوبة أو عقد قران – فقط 7 دولار</h3>
+      <p>
+        واحصل على بطاقة زفاف مجانية!
+        تشمل كل بطاقة:
+        ✓ تعديلين
+        ✓ دقة عالية
+        ✓ ملف PDF قابل للطباعة
+      </p>
+    </div>
+
+    <div class="offer-box">
+      <h3>🌟 فيديو مجاني مقابل دعمنا!</h3>
+      <p>
+        احصل على فيديو فخم مجانًا يشمل:
+        ✓ 3 تعديلات
+        ✓ دقة عالية
+        فقط شارك موقعنا مع أصدقائك، وادعُ زبائن جدد للاستفادة من هذا العرض الرائع!
+      </p>
     </div>
   </section>
 
+  <!-- نموذج الطلب -->
   <section class="form-section">
-    <h2 id="form-title">نموذج الطلب</h2>
+    <h2>نموذج الطلب</h2>
     <form action="https://formspree.io/f/mqabqndr" method="POST">
       <input type="text" name="name" placeholder="الاسم" required><br>
       <input type="tel" name="phone" placeholder="رقم الهاتف" required><br>
@@ -198,38 +184,13 @@ a:hover {
       <input type="date" name="date" placeholder="التاريخ" required><br>
       <input type="text" name="location" placeholder="المكان" required><br>
       <textarea name="note" placeholder="ملاحظات إضافية" rows="4"></textarea><br>
-      <button type="submit" id="submit-btn">إرسال الطلب</button>
+      <button type="submit">إرسال الطلب</button>
     </form>
   </section>
 
+  <!-- الفوتر -->
   <footer>
     جميع الحقوق محفوظة © Aya Design 2025
   </footer>
-
-  <script>
-    let isArabic = true;
-    function toggleLanguage() {
-      isArabic = !isArabic;
-      document.documentElement.lang = isArabic ? "ar" : "en";
-      document.body.dir = isArabic ? "rtl" : "ltr";
-      document.querySelector(".language-btn").innerText = isArabic ? "English" : "عربي";
-
-      document.getElementById("main-title").innerText = isArabic ? "مرحبًا بكم في Aya Design" : "Welcome to Aya Design";
-      document.getElementById("tagline").innerText = isArabic ? "تصاميم فاخرة لجميع مناسباتك" : "Luxury designs for all your occasions";
-
-      document.getElementById("offer1").innerText = isArabic ? "تصميم دعوة فيديو فخم - 10 دولار" : "Luxury Video Invitation - $10";
-      document.getElementById("offer2").innerText = isArabic ? "تصميم بطاقة دعوة ثابتة - 15 ريال" : "Static Invitation Card - 15 SAR";
-      document.getElementById("offer3").innerText = isArabic ? "تصميم مخصص مع تعديل غير محدود - 40 ريال" : "Custom Design with Unlimited Edits - 40 SAR";
-      document.getElementById("offer4").innerText = isArabic ? "باقة شاملة (بطاقة + فيديو + تهنئة) - 60 ريال" : "Full Package (Card + Video + Greeting) - 60 SAR";
-      document.getElementById("offer5").innerText = isArabic ? "خصم 10% عند طلب أكثر من دعوة" : "10% Discount for Multiple Invitations";
-      document.getElementById("offer6").innerText = isArabic ? "دعوة عيد ميلاد باسم الطفل - 20 ريال" : "Birthday Invitation (Child's Name) - 20 SAR";
-      document.getElementById("offer7").innerText = isArabic ? "دعوة رمضان/عيد - 10 ريال فقط" : "Ramadan/Eid Invitation - Only 10 SAR";
-
-      document.getElementById("catalog-title").innerText = isArabic ? "القوالب الجاهزة" : "Ready-Made Templates";
-      document.getElementById("form-title").innerText = isArabic ? "نموذج الطلب" : "Order Form";
-      document.getElementById("submit-btn").innerText = isArabic ? "إرسال الطلب" : "Submit Order";
-    }
-  </script>
 </body>
-
 </html>
