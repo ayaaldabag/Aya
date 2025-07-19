@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head
+  <style>
+  /* حماية الصور والكتابة */
+  body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+  }
+
+  /* حاوية صورة القالب مع العلامة */
+  .template-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+  }
+
+  .template-container img {
+    width: 100%;
+    filter: brightness(0.8);
+    border-radius: 16px;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(11, 26, 60, 0.7);
+    color: #ffb6d9;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+</style>
+<head
   <meta charset="UTF-8">
   <title>Aya Design</title>
   <!-- Google Analytics -->
@@ -309,4 +350,16 @@
     جميع الحقوق محفوظة © Aya Design 2025
   </footer>
 </body>
+  <script>
+  // منع الضغط بزر الفأرة الأيمن
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // منع تحديد أي عنصر
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+</script>
+
 </html>
