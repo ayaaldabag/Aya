@@ -241,7 +241,70 @@
       </select><br>
       <button type="submit">إرسال الطلب</button>
     </form>
-  </section>
+  </section
+    <section style="background-color: #0b1a3c; padding: 60px 20px; color: white; font-family: 'Cairo', sans-serif; text-align: center;">
+  <h2 style="font-size: 36px; color: #ffb6d9; margin-bottom: 40px;">✨ القوالب الجاهزة للبيع ✨</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; animation: fadeIn 2s ease;">
+    
+    <!-- قالب 1 -->
+    <div style="background-color: #13254d; border-radius: 20px; padding: 20px; transition: transform 0.4s; box-shadow: 0 4px 15px rgba(255,255,255,0.1);">
+      <img src="template1.jpg" alt="قالب 1" style="width: 100%; border-radius: 16px;" />
+      <h3 style="color: #ffffff; margin-top: 15px;">دعوة ملكية راقية</h3>
+      <p style="color: #ffb6d9;">مثالية لحفلات الزفاف الفاخرة، تصميم أنيق بخط ذهبي.</p>
+    </div>
+
+    <!-- قالب 2 -->
+    <div style="background-color: #13254d; border-radius: 20px; padding: 20px; transition: transform 0.4s;">
+      <img src="template2.jpg" alt="قالب 2" style="width: 100%; border-radius: 16px;" />
+      <h3 style="color: #ffffff; margin-top: 15px;">دعوة حناء أنثوية</h3>
+      <p style="color: #ffb6d9;">ألوان وردية ناعمة، بنقوش شرقية فخمة، قابلة للتخصيص.</p>
+    </div>
+
+    <!-- قالب 3 -->
+    <div style="background-color: #13254d; border-radius: 20px; padding: 20px; transition: transform 0.4s;">
+      <img src="template3.jpg" alt="قالب 3" style="width: 100%; border-radius: 16px;" />
+      <h3 style="color: #ffffff; margin-top: 15px;">دعوة تخرج أنيقة</h3>
+      <p style="color: #ffb6d9;">تصميم عصري وجذاب لمناسبات التخرج والنجاح.</p>
+    </div>
+
+  </div>
+
+  <!-- نموذج الطلب -->
+  <div id="order-form" style="margin-top: 70px; max-width: 500px; margin-inline: auto; text-align: start;">
+    <h3 style="color: #ffffff; margin-bottom: 20px;">📩 نموذج الطلب</h3>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      <input type="text" name="الاسم" placeholder="الاسم الكامل" required style="padding: 12px; border-radius: 8px; border: none;" />
+      <input type="text" name="رقم الهاتف" placeholder="رقم الهاتف" required style="padding: 12px; border-radius: 8px; border: none;" />
+      <select name="القالب المختار" required style="padding: 12px; border-radius: 8px; border: none;">
+        <option value="">اختر القالب</option>
+        <option>دعوة ملكية راقية</option>
+        <option>دعوة حناء أنثوية</option>
+        <option>دعوة تخرج أنيقة</option>
+      </select>
+      <textarea name="ملاحظات إضافية" placeholder="هل تريد كتابة مخصصة على القالب؟ اكتبها هنا" style="padding: 12px; border-radius: 8px; border: none;"></textarea>
+      <button type="submit" style="background-color: #ffb6d9; color: #0b1a3c; padding: 14px; border-radius: 10px; font-weight: bold; border: none;">إرسال الطلب</button>
+    </form>
+
+    <p style="margin-top: 25px; font-size: 14px; color: #ffb6d9;">
+      ✅ سيتم التواصل معك من قبل الفريق لإرسال طلبك، والدفع عبر <strong>زين كاش 💴</strong><br>
+      ⏳ خلال الساعات القادمة سيتم إرسال القالب بصيغة <strong>PDF</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- مؤثرات حركية خفيفة -->
+<style>
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  div:hover {
+    transform: scale(1.03);
+  }
+</style>
+
   <footer>
     جميع الحقوق محفوظة © Aya Design 2025
   </footer>
