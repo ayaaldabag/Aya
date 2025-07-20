@@ -233,76 +233,59 @@
 ✓ دقة عالية
 شارك موقعنا مع أصدقائك!</p>
     </div>
-<section style="background-color: #0a1833; padding: 50px 20px; text-align: center;">
+<section style="background-color: #0a1833; padding: 50px 20px; text-align: center; font-family: 'Cairo', sans-serif;">
   <h2 style="color: white; font-size: 34px; margin-bottom: 40px;">📸 معرض التصاميم</h2>
 
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* دائماً 4 أعمدة */
-      gap: 25px;
-      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .card {
       background-color: #112244;
       border-radius: 16px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
       overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      width: 100%;
-      max-width: 220px; /* تصغير البطاقات */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+      transform: scale(1.02);
     }
 
     .card img {
       width: 100%;
       display: block;
-      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة وتقليل وضوحها */
-      pointer-events: none;
-      user-select: none;
     }
 
     .card p {
-      color: #ffffff;
-      font-size: 14px;
-      padding: 12px;
-      text-align: center;
-      line-height: 1.6;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      margin: 0;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .gallery {
-        grid-template-columns: repeat(4, 1fr); /* تبقى 4 حتى بالموبايل */
-        overflow-x: auto;
-        gap: 20px;
-      }
-      .gallery::-webkit-scrollbar {
-        display: none;
-      }
-      .gallery {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .card p {
+        font-size: 15px;
+        padding: 15px 10px;
+      }
+    }
+
   </style>
   <div class="gallery">
     <div class="card fade-in">
