@@ -233,15 +233,14 @@
 ✓ دقة عالية
 شارك موقعنا مع أصدقائك!</p>
     </div>
-  </section>
 <section style="background-color: #0a1833; padding: 50px 20px; text-align: center;">
   <h2 style="color: white; font-size: 34px; margin-bottom: 40px;">📸 معرض التصاميم</h2>
 
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(4, 1fr); /* دائماً 4 أعمدة */
+      gap: 25px;
       justify-items: center;
     }
 
@@ -252,6 +251,8 @@
       overflow: hidden;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 220px; /* تصغير البطاقات */
     }
 
     .card:hover {
@@ -262,13 +263,15 @@
     .card img {
       width: 100%;
       display: block;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة وتقليل وضوحها */
+      pointer-events: none;
+      user-select: none;
     }
 
     .card p {
       color: #ffffff;
-      font-size: 18px;
-      padding: 15px;
+      font-size: 14px;
+      padding: 12px;
       text-align: center;
       line-height: 1.6;
     }
@@ -285,8 +288,22 @@
         transform: translateY(0);
       }
     }
-  </style>
 
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr); /* تبقى 4 حتى بالموبايل */
+        overflow-x: auto;
+        gap: 20px;
+      }
+      .gallery::-webkit-scrollbar {
+        display: none;
+      }
+      .gallery {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  </style>
   <div class="gallery">
     <div class="card fade-in">
       <img src="IMG_1994.jpeg" alt="دعوة حناء">
