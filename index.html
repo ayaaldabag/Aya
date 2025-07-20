@@ -239,7 +239,7 @@
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* دائمًا 3 */
       gap: 30px;
       max-width: 1200px;
       margin: auto;
@@ -267,26 +267,34 @@
       font-size: 16px;
       padding: 10px;
       margin: 0;
+      background-color: rgba(255,255,255,0.05);
     }
 
-    @media (max-width: 900px) {
+    /* نحذف الاستجابة ونخليها دائمًا 3 */
+    @media (max-width: 768px) {
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .card p {
-        font-size: 15px;
-        padding: 15px 10px;
+        font-size: 14px;
+        padding: 8px;
       }
     }
 
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .card p {
+        font-size: 13px;
+        padding: 6px;
+      }
+    }
   </style>
+
   <div class="gallery">
     <div class="card fade-in">
       <img src="IMG_1994.jpeg" alt="دعوة حناء">
