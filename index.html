@@ -349,15 +349,17 @@
       </select><br>
       <button type="submit">إرسال الطلب</button>
     </form>
-<section style="background-color: #0a1833; padding: 50px 20px; text-align: center;">
+<section style="background-color: #0a1833; padding: 50px 20px; text-align: center; font-family: 'Cairo', sans-serif;">
   <h2 style="color: white; font-size: 34px; margin-bottom: 40px;">📸 معرض التصاميم</h2>
 
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* دائماً 4 أعمدة */
+      grid-template-columns: repeat(4, 1fr); /* 4 أعمدة افتراضيًا */
       gap: 25px;
       justify-items: center;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .card {
@@ -368,7 +370,7 @@
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
       width: 100%;
-      max-width: 220px; /* تصغير البطاقات */
+      max-width: 220px;
     }
 
     .card:hover {
@@ -379,44 +381,28 @@
     .card img {
       width: 100%;
       display: block;
-      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة وتقليل وضوحها */
+      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة */
       pointer-events: none;
       user-select: none;
     }
 
     .card p {
-      color: #ffffff;
+      color: white;
       font-size: 14px;
       padding: 12px;
       text-align: center;
       line-height: 1.6;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    @media (max-width: 767px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة في الهواتف */
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       .gallery {
-        grid-template-columns: repeat(4, 1fr); /* تبقى 4 حتى بالموبايل */
-        overflow-x: auto;
-        gap: 20px;
-      }
-      .gallery::-webkit-scrollbar {
-        display: none;
-      }
-      .gallery {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        grid-template-columns: repeat(2, 1fr); /* 2 أعمدة في الشاشات الصغيرة جداً */
       }
     }
   </style>
