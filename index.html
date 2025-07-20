@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .template-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+    background-color: #11224d;
+    transition: transform 0.3s;
+    min-width: 220px; /* حتى تبقى البطاقة بحجم جيد */
+  }
+
+  .template-container:hover {
+    transform: scale(1.03);
+  }
+
+  .template-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(11, 26, 60, 0.7);
+    color: #ffb6d9;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+
+  .template-description {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  body {
+    background-color: #0b1a3c;
+    color: white;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+<head>
   <meta charset="UTF-8">
   <title>Aya Design</title>
   
