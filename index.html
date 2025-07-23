@@ -233,20 +233,20 @@
 ✓ دقة عالية
 شارك موقعنا مع أصدقائك!</p>
     </div>
-    <section style="background-color: #0a1833; padding: 50px 20px; text-align: center; font-family: 'Cairo', sans-serif;">
+<section style="background-color: #0a1833; padding: 50px 20px; text-align: center; font-family: 'Cairo', sans-serif;">
   <h2 style="color: white; font-size: 34px; margin-bottom: 40px;">📸 معرض التصاميم</h2>
 
   <style>
     .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* افتراضي 4 أعمدة */
       gap: 25px;
+      justify-items: center;
       max-width: 1200px;
       margin: auto;
     }
 
-    .gallery .card {
+    .card {
       background-color: #112244;
       border-radius: 16px;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
@@ -257,20 +257,20 @@
       max-width: 220px;
     }
 
-    .gallery .card:hover {
+    .card:hover {
       transform: scale(1.03);
       box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
 
-    .gallery .card img {
+    .card img {
       width: 100%;
       display: block;
-      filter: blur(1.5px) brightness(0.7);
+      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة */
       pointer-events: none;
       user-select: none;
     }
 
-    .gallery .card p {
+    .card p {
       color: white;
       font-size: 14px;
       padding: 12px;
@@ -278,20 +278,17 @@
       line-height: 1.6;
     }
 
-    /* الأجهزة الصغيرة - موبايل */
+    /* في الشاشات الصغيرة (موبايل) - عمودين */
     @media (max-width: 767px) {
       .gallery {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    /* الأجهزة المتوسطة والكبيرة - تابلت وما فوق */
+    /* في الشاشات المتوسطة والكبيرة (تابلت وفوق) - 4 أعمدة */
     @media (min-width: 768px) {
       .gallery {
-        display: grid;
-        grid-template-rows: repeat(4, auto); /* 4 صفوف */
-        justify-content: center;
-        gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
@@ -362,15 +359,15 @@
 
   <style>
     .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* افتراضي 4 أعمدة */
       gap: 25px;
+      justify-items: center;
       max-width: 1200px;
       margin: auto;
     }
 
-    .gallery .card {
+    .card {
       background-color: #112244;
       border-radius: 16px;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
@@ -381,20 +378,20 @@
       max-width: 220px;
     }
 
-    .gallery .card:hover {
+    .card:hover {
       transform: scale(1.03);
       box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
 
-    .gallery .card img {
+    .card img {
       width: 100%;
       display: block;
-      filter: blur(1.5px) brightness(0.7);
+      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة */
       pointer-events: none;
       user-select: none;
     }
 
-    .gallery .card p {
+    .card p {
       color: white;
       font-size: 14px;
       padding: 12px;
@@ -402,24 +399,20 @@
       line-height: 1.6;
     }
 
-    /* الأجهزة الصغيرة - موبايل */
+    /* في الشاشات الصغيرة (موبايل) - عمودين */
     @media (max-width: 767px) {
       .gallery {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    /* الأجهزة المتوسطة والكبيرة - تابلت وما فوق */
+    /* في الشاشات المتوسطة والكبيرة (تابلت وفوق) - 4 أعمدة */
     @media (min-width: 768px) {
       .gallery {
-        display: grid;
-        grid-template-rows: repeat(4, auto); /* 4 صفوف */
-        justify-content: center;
-        gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
-
     <!-- قالب 1 -->
     <div style="background-color: #13254d; border-radius: 20px; padding: 15px; position: relative; width: 200px; overflow: hidden; box-shadow: 0 4px 15px rgba(255,255,255,0.1);">
       <img src="IMG_2020.jpeg" alt="قالب 1" style="width: 100%; border-radius: 12px; filter: blur(3px) brightness(0.5); pointer-events: none;">
