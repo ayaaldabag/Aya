@@ -354,15 +354,15 @@
 
   <style>
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 أعمدة افتراضيًا */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 25px;
-      justify-items: center;
       max-width: 1200px;
       margin: auto;
     }
 
-    .card {
+    .gallery .card {
       background-color: #112244;
       border-radius: 16px;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
@@ -373,20 +373,20 @@
       max-width: 220px;
     }
 
-    .card:hover {
+    .gallery .card:hover {
       transform: scale(1.03);
       box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
 
-    .card img {
+    .gallery .card img {
       width: 100%;
       display: block;
-      filter: blur(1.5px) brightness(0.7); /* تشويش الصورة */
+      filter: blur(1.5px) brightness(0.7);
       pointer-events: none;
       user-select: none;
     }
 
-    .card p {
+    .gallery .card p {
       color: white;
       font-size: 14px;
       padding: 12px;
@@ -394,15 +394,20 @@
       line-height: 1.6;
     }
 
+    /* الأجهزة الصغيرة - موبايل */
     @media (max-width: 767px) {
       .gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة في الهواتف */
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 480px) {
+    /* الأجهزة المتوسطة والكبيرة - تابلت وما فوق */
+    @media (min-width: 768px) {
       .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 أعمدة في الشاشات الصغيرة جداً */
+        display: grid;
+        grid-template-rows: repeat(4, auto); /* 4 صفوف */
+        justify-content: center;
+        gap: 25px;
       }
     }
   </style>
