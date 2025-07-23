@@ -360,7 +360,7 @@
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* افتراضي 4 أعمدة */
+      grid-template-columns: repeat(4, 1fr); /* 4 أعمدة افتراضيًا */
       gap: 25px;
       justify-items: center;
       max-width: 1200px;
@@ -385,7 +385,8 @@
 
     .card img {
       width: 100%;
-      display: block;
+      height: 220px;
+      object-fit: cover;
       filter: blur(1.5px) brightness(0.7); /* تشويش الصورة */
       pointer-events: none;
       user-select: none;
@@ -399,20 +400,21 @@
       line-height: 1.6;
     }
 
-    /* في الشاشات الصغيرة (موبايل) - عمودين */
+    /* التابلت واللابتوب */
+    @media (max-width: 991px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* الهاتف */
     @media (max-width: 767px) {
       .gallery {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
-    /* في الشاشات المتوسطة والكبيرة (تابلت وفوق) - 4 أعمدة */
-    @media (min-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
   </style>
+</section>
     <!-- قالب 1 -->
     <div style="background-color: #13254d; border-radius: 20px; padding: 15px; position: relative; width: 200px; overflow: hidden; box-shadow: 0 4px 15px rgba(255,255,255,0.1);">
       <img src="IMG_2020.jpeg" alt="قالب 1" style="width: 100%; border-radius: 12px; filter: blur(3px) brightness(0.5); pointer-events: none;">
