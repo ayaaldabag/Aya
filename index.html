@@ -233,57 +233,65 @@
 ✓ دقة عالية
 شارك موقعنا مع أصدقائك!</p>
     </div>
-    <style>
+    <section style="background-color: #0a1833; padding: 50px 20px; text-align: center; font-family: 'Cairo', sans-serif;">
+  <h2 style="color: white; font-size: 34px; margin-bottom: 40px;">📸 معرض التصاميم</h2>
+
+  <style>
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .card {
+    .gallery .card {
       background-color: #112244;
-      border-radius: 12px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 220px;
     }
 
-    .card:hover {
-      transform: scale(1.02);
+    .gallery .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     }
 
-    .card img {
+    .gallery .card img {
       width: 100%;
       display: block;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      filter: blur(1.5px) brightness(0.7);
+      pointer-events: none;
+      user-select: none;
     }
 
-    .card p {
+    .gallery .card p {
       color: white;
-      font-size: 15px;
-      padding: 10px;
-      margin: 0;
-      background-color: rgba(255, 255, 255, 0.04);
+      font-size: 14px;
+      padding: 12px;
+      text-align: center;
+      line-height: 1.6;
     }
 
-    /* نثبت 3 أعمدة مهما كان حجم الشاشة */
-    @media (max-width: 768px) {
+    /* الأجهزة الصغيرة - موبايل */
+    @media (max-width: 767px) {
       .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 480px) {
+    /* الأجهزة المتوسطة والكبيرة - تابلت وما فوق */
+    @media (min-width: 768px) {
       .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-      }
-
-      .card p {
-        font-size: 13px;
-        padding: 8px;
+        display: grid;
+        grid-template-rows: repeat(4, auto); /* 4 صفوف */
+        justify-content: center;
+        gap: 25px;
       }
     }
   </style>
