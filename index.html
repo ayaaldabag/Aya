@@ -539,6 +539,22 @@
     e.preventDefault();
   });
 </script>
+</body>
+    <!-- الكود مال البانر -->
+  <div style="position: fixed; bottom: 0; width: 100%; background-color: #0a1833; color: white; text-align: center; padding: 10px; z-index: 9999;">
+    <span id="banner-text" style="font-size: 16px;">أهلاً وسهلاً بزوارنا من السعودية 🇸🇦 يسعدنا تواجدكم! 💖 خصم خاص لأول طلب – تواصلوا معنا الآن!</span>
+  </div>
+
+  <script>
+    // إذا تردين تميزين حسب اللغة فقط (تقدرين لاحقًا حسب IP)
+    const country = navigator.language.includes("ar") ? "السعودية" : "سلێمانی";
+    const bannerText = document.getElementById("banner-text");
+
+    if (country === "سلێمانی") {
+      bannerText.innerHTML = "خوش ئەمادە بۆ میوانەکانمان لە سلێمانی 🌸 زور خوشحالین بە سەردانی ئێوە! تصاميمنا تنرادلچ، جربوها اليوم!";
+    }
+  </script>
+</body>
 
 
 
