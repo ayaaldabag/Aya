@@ -329,7 +329,7 @@
     <img class="slide-image" src="IMG_2179.jpeg" alt="توزيعة 10">
   </div>
 <!-- زر اطلب الآن -->
-<button onclick="document.getElementById('order-details').style.display='block'" style="background-color: #cc2c84; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;">
+<button id="orderBtn" style="background-color: #cc2c84; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;">
   اطلب الآن
 </button>
 
@@ -353,10 +353,18 @@
   </form>
 </div>
 
-</body>
-</html>
-
-
+<!-- JavaScript لتشغيل الزر -->
+<script>
+  document.getElementById("orderBtn").addEventListener("click", function() {
+    var details = document.getElementById("order-details");
+    if (details.style.display === "none" || details.style.display === "") {
+      details.style.display = "block";
+      details.scrollIntoView({ behavior: "smooth" });
+    } else {
+      details.style.display = "none";
+    }
+  });
+</script>
   <section class="offers">
     <div class="offer-box">
       <h3>👑 بطاقة بطراز ملكي فاخر – فقط 7 دولار</h3>
