@@ -248,10 +248,9 @@
     </button>
   </form>
 </div>
-
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>توزيعات التخرج 🎓</title>
   <style>
     body {
@@ -293,77 +292,123 @@
     .slide-image:hover {
       transform: scale(1.05);
     }
+
+    #order-details {
+      display: none;
+      margin-top: 20px;
+      text-align: right;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      max-width: 500px;
+      margin-inline: auto;
+    }
+
+    button#orderBtn {
+      background-color: #cc2c84;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      font-size: 16px;
+      display: block;
+      margin: 30px auto 0 auto;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    form button[type="submit"] {
+      background-color: #0a1833;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      font-size: 16px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
 
   <h2>توزيعات التخرج 🎓</h2>
   <div class="slider-container">
-    <img class="slide-image" src="IMG_2109.jpeg" alt="توزيعة 1">
-    <img class="slide-image" src="IMG_2108.jpeg" alt="توزيعة 2">
-    <img class="slide-image" src="IMG_2101.jpeg" alt="توزيعة 3">
-    <img class="slide-image" src="IMG_2099.jpeg" alt="توزيعة 4">
-    <img class="slide-image" src="IMG_2098.jpeg" alt="توزيعة 5">
+    <img class="slide-image" src="IMG_2109.jpeg" alt="توزيعة 1" />
+    <img class="slide-image" src="IMG_2108.jpeg" alt="توزيعة 2" />
+    <img class="slide-image" src="IMG_2101.jpeg" alt="توزيعة 3" />
+    <img class="slide-image" src="IMG_2099.jpeg" alt="توزيعة 4" />
+    <img class="slide-image" src="IMG_2098.jpeg" alt="توزيعة 5" />
   </div>
 
   <h2>توزيعات زفاف & خطوبه & مهر 💍</h2>
   <div class="slider-container">
-    <img class="slide-image" src="IMG_2178.jpeg" alt="توزيعة 1">
-    <img class="slide-image" src="IMG_2171.jpeg" alt="توزيعة 2">
-    <img class="slide-image" src="IMG_2170.jpeg" alt="توزيعة 3">
-    <img class="slide-image" src="IMG_2169.jpeg" alt="توزيعة 4">
-    <img class="slide-image" src="IMG_2168.jpeg" alt="توزيعة 5">
+    <img class="slide-image" src="IMG_2178.jpeg" alt="توزيعة 1" />
+    <img class="slide-image" src="IMG_2171.jpeg" alt="توزيعة 2" />
+    <img class="slide-image" src="IMG_2170.jpeg" alt="توزيعة 3" />
+    <img class="slide-image" src="IMG_2169.jpeg" alt="توزيعة 4" />
+    <img class="slide-image" src="IMG_2168.jpeg" alt="توزيعة 5" />
   </div>
 
   <h2>توزيعات مولود جديد (ولد & بنت) 👶</h2>
   <div class="slider-container">
-    <img class="slide-image" src="IMG_2188.jpeg" alt="توزيعة 1">
-    <img class="slide-image" src="IMG_2187.jpeg" alt="توزيعة 2">
-    <img class="slide-image" src="IMG_2186.jpeg" alt="توزيعة 3">
-    <img class="slide-image" src="IMG_2185.jpeg" alt="توزيعة 4">
-    <img class="slide-image" src="IMG_2184.jpeg" alt="توزيعة 5">
-    <img class="slide-image" src="IMG_2183.jpeg" alt="توزيعة 6">
-    <img class="slide-image" src="IMG_2182.jpeg" alt="توزيعة 7">
-    <img class="slide-image" src="IMG_2181.jpeg" alt="توزيعة 8">
-    <img class="slide-image" src="IMG_2180.jpeg" alt="توزيعة 9">
-    <img class="slide-image" src="IMG_2179.jpeg" alt="توزيعة 10">
+    <img class="slide-image" src="IMG_2188.jpeg" alt="توزيعة 1" />
+    <img class="slide-image" src="IMG_2187.jpeg" alt="توزيعة 2" />
+    <img class="slide-image" src="IMG_2186.jpeg" alt="توزيعة 3" />
+    <img class="slide-image" src="IMG_2185.jpeg" alt="توزيعة 4" />
+    <img class="slide-image" src="IMG_2184.jpeg" alt="توزيعة 5" />
+    <img class="slide-image" src="IMG_2183.jpeg" alt="توزيعة 6" />
+    <img class="slide-image" src="IMG_2182.jpeg" alt="توزيعة 7" />
+    <img class="slide-image" src="IMG_2181.jpeg" alt="توزيعة 8" />
+    <img class="slide-image" src="IMG_2180.jpeg" alt="توزيعة 9" />
+    <img class="slide-image" src="IMG_2179.jpeg" alt="توزيعة 10" />
   </div>
-<!-- زر اطلب الآن -->
-<button id="orderBtn" style="background-color: #cc2c84; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;">
-  اطلب الآن
-</button>
 
-<!-- التفاصيل -->
-<div id="order-details" style="display:none; margin-top: 20px; text-align: right; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 12px; font-family: 'Cairo', sans-serif;">
-  <p style="color: #0a1833; font-size: 16px; line-height: 1.8;">
-    🎁 <strong>توزيعات حسب الطلب:</strong> عندنا من الرخيص إلى أغلى شي  
-    <br>💡 <strong>السعر يعتمد على طلب النموذج</strong>  
-    <br>🧷 <strong>نقدر نسوي توزيعات خاصة حسب ذوقك إذا تحب شي معين</strong>  
-    <br>🚚 <strong>يوجد توصيل لجميع محافظات العراق</strong>  
-    <br><br>📞 <strong>للطلب:</strong> ادخل رقم الهاتف حتى نتواصل وياك مباشرة
-  </p>
+  <!-- زر اطلب الآن -->
+  <button id="orderBtn">اطلب الآن</button>
 
-  <!-- نموذج إرسال -->
-  <form action="https://formspree.io/f/mqabqndr" method="POST">
-    <input type="text" name="name" placeholder="الاسم الكامل" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
-    <input type="tel" name="phone" placeholder="رقم الهاتف" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc;">
-    <button type="submit" style="background-color: #0a1833; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer;">
-      إرسال
-    </button>
-  </form>
-</div>
+  <!-- التفاصيل -->
+  <div id="order-details">
+    <p style="color: #0a1833; font-size: 16px; line-height: 1.8;">
+      🎁 <strong>توزيعات حسب الطلب:</strong> عندنا من الرخيص إلى أغلى شي  
+      <br>💡 <strong>السعر يعتمد على طلب النموذج</strong>  
+      <br>🧷 <strong>نقدر نسوي توزيعات خاصة حسب ذوقك إذا تحب شي معين</strong>  
+      <br>🚚 <strong>يوجد توصيل لجميع محافظات العراق</strong>  
+      <br><br>📞 <strong>للطلب:</strong> ادخل رقم الهاتف حتى نتواصل وياك مباشرة
+    </p>
 
-<!-- JavaScript لتشغيل الزر -->
-<script>
-  document.getElementById("orderBtn").addEventListener("click", function() {
-    var details = document.getElementById("order-details");
-    if (details.style.display === "none" || details.style.display === "") {
-      details.style.display = "block";
-      details.scrollIntoView({ behavior: "smooth" });
-    } else {
-      details.style.display = "none";
-    }
-  });
+    <!-- نموذج إرسال -->
+    <form action="https://formspree.io/f/mqabqndr" method="POST">
+      <input type="text" name="name" placeholder="الاسم الكامل" required />
+      <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("orderBtn").addEventListener("click", function() {
+      var details = document.getElementById("order-details");
+      if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+        details.scrollIntoView({ behavior: "smooth" });
+      } else {
+        details.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
+
 </script>
   <section class="offers">
     <div class="offer-box">
