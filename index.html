@@ -224,6 +224,31 @@
     <p>📦 وإذا حاب تضيف شي أو تتأكد من شي، اكتبه في قسم <strong>الملاحظات</strong>.</p>
     <p>📲 عند الإرسال، راح يوصلني الطلب بالكامل و أتواصل وياك عن طريق رقم الهاتف المُدخل.</p>
   </div>
+    <!-- زر اطلب الآن -->
+<button onclick="document.getElementById('order-details').style.display='block'" style="background-color: #cc2c84; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;">
+  اطلب الآن
+</button>
+
+<!-- التفاصيل -->
+<div id="order-details" style="display:none; margin-top: 20px; text-align: right; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 12px; font-family: 'Cairo', sans-serif;">
+  <p style="color: #0a1833; font-size: 16px; line-height: 1.8;">
+    🎁 <strong>توزيعات حسب الطلب:</strong> عندنا من الرخيص إلى أغلى شي  
+    <br>💡 <strong>السعر يعتمد على طلب النموذج</strong>  
+    <br>🧷 <strong>نقدر نسوي توزيعات خاصة حسب ذوقك إذا تحب شي معين</strong>  
+    <br>🚚 <strong>يوجد توصيل لجميع محافظات بغداد</strong>  
+    <br><br>📞 <strong>للطلب:</strong> ادخل رقم الهاتف حتى نتواصل وياك مباشرة
+  </p>
+
+  <!-- نموذج إرسال -->
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc;">
+    <button type="submit" style="background-color: #0a1833; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer;">
+      إرسال
+    </button>
+  </form>
+</div>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -303,6 +328,30 @@
     <img class="slide-image" src="IMG_2180.jpeg" alt="توزيعة 9">
     <img class="slide-image" src="IMG_2179.jpeg" alt="توزيعة 10">
   </div>
+<!-- زر اطلب الآن -->
+<button onclick="document.getElementById('order-details').style.display='block'" style="background-color: #cc2c84; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-family: 'Cairo', sans-serif;">
+  اطلب الآن
+</button>
+
+<!-- التفاصيل -->
+<div id="order-details" style="display:none; margin-top: 20px; text-align: right; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 12px; font-family: 'Cairo', sans-serif;">
+  <p style="color: #0a1833; font-size: 16px; line-height: 1.8;">
+    🎁 <strong>توزيعات حسب الطلب:</strong> عندنا من الرخيص إلى أغلى شي  
+    <br>💡 <strong>السعر يعتمد على طلب النموذج</strong>  
+    <br>🧷 <strong>نقدر نسوي توزيعات خاصة حسب ذوقك إذا تحب شي معين</strong>  
+    <br>🚚 <strong>يوجد توصيل لجميع محافظات بغداد</strong>  
+    <br><br>📞 <strong>للطلب:</strong> ادخل رقم الهاتف حتى نتواصل وياك مباشرة
+  </p>
+
+  <!-- نموذج إرسال -->
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc;">
+    <button type="submit" style="background-color: #0a1833; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer;">
+      إرسال
+    </button>
+  </form>
+</div>
 
 </body>
 </html>
