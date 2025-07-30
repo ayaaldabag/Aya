@@ -764,7 +764,67 @@
       bannerText.innerHTML = "خوش ئەمادە بۆ میوانەکانمان لە سلێمانی 🌸 زور خوشحالین بە سەردانی ئێوە! تصاميمنا تنرادلچ، جربوها اليوم!";
     }
   </script>
+<body/>
+<!-- نافذة الإعلان -->
+<div id="popup-ad" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+ background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center;
+ z-index: 9999;">
+  <div style="background-color: #fff0f7; border: 2px solid #cc2c84; border-radius: 16px;
+   padding: 20px; max-width: 650px; width: 90%; font-family: 'Cairo', sans-serif;
+   text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative;">
+    
+    <h2 style="color: #cc2c84; margin-bottom: 10px;">✨ يتوفر الآن بكج العروس الكامل ✨</h2>
 
+    <p style="color: #0a1833; font-size: 15px; margin-bottom: 10px;">
+      🎀 بكج متكامل وفخم لجميع المناسبات 💍<br>
+      🚚 <strong>التوصيل متوفر لجميع محافظات العراق</strong>
+    </p>
 
+    <img src="IMG_2203.jpeg" alt="بكج العروس" style="width: 100%; border-radius: 12px; margin-bottom: 15px;">
+
+    <div style="text-align: right; background-color: #ffffffcc; padding: 10px 15px;
+     border-radius: 12px; margin-bottom: 15px; color: #0a1833; font-size: 14px;">
+      <ul style="padding-right: 20px; list-style: '💌 '; margin: 0;">
+        <li>3 دعوات: زفاف، خطوبة أو عقد قران، حناء</li>
+        <li>100 توزيعة مهر / عقد / حناء</li>
+        <li>100 توزيعة زفاف</li>
+        <li>بكج ثاني يحتوي شور برايد (حفل صبايا)</li>
+        <li>يمكن زيادة / تقليل العدد حسب الطلب</li>
+      </ul>
+    </div>
+
+    <button onclick="document.getElementById('popup-order').style.display='block'" style="background-color: #cc2c84; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 15px;">
+      اطلب الآن
+    </button>
+
+    <!-- نموذج الطلب -->
+    <div id="popup-order" style="display:none; margin-top: 15px;">
+      <form action="https://formspree.io/f/mqabqndr" method="POST">
+        <input type="text" name="name" placeholder="الاسم الكامل" required style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 6px; border: 1px solid #ccc;">
+        <input type="tel" name="phone" placeholder="رقم الهاتف" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
+        <button type="submit" style="background-color: #0a1833; color: white; padding: 10px 20px; border: none; border-radius: 8px;">
+          إرسال الطلب
+        </button>
+      </form>
+    </div>
+
+    <!-- زر إغلاق -->
+    <span onclick="closePopup()" style="position: absolute; top: 10px; left: 15px; cursor: pointer; font-size: 20px; color: #cc2c84;">✖</span>
+  </div>
+</div>
+
+<script>
+  // إخفاء الإعلان تلقائياً بعد 15 ثانية
+  setTimeout(function () {
+    document.getElementById('popup-ad').style.display = 'none';
+  }, 15000); // 15000 = 15 ثانية
+
+  // إغلاق يدوي عند الضغط على ✖
+  function closePopup() {
+    document.getElementById('popup-ad').style.display = 'none';
+  }
+</script>
+</body>
+</html>
 
 
